@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://maoa-l.github.io</id>
     <title>Gridea</title>
-    <updated>2019-09-17T10:27:52.573Z</updated>
+    <updated>2019-09-17T10:32:04.451Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maoa-l.github.io"/>
     <link rel="self" href="https://maoa-l.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://maoa-l.github.io/images/avatar.png</logo>
     <icon>https://maoa-l.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Hello]]></title>
+        <id>https://maoa-l.github.io/post/hello</id>
+        <link href="https://maoa-l.github.io/post/hello">
+        </link>
+        <updated>2019-09-17T10:31:11.000Z</updated>
+        <summary type="html"><![CDATA[<p>content</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>content</p>
+<!--more-->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://maoa-l.github.io/post/hello-gridea</id>
