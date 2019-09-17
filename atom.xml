@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://my.cyanzoy.top</id>
+    <id>http://my.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-17T13:50:13.637Z</updated>
+    <updated>2019-09-17T13:52:46.294Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://my.cyanzoy.top"/>
-    <link rel="self" href="https://my.cyanzoy.top/atom.xml"/>
+    <link rel="alternate" href="http://my.cyanzoy.top"/>
+    <link rel="self" href="http://my.cyanzoy.top/atom.xml"/>
     <subtitle>为技术而生</subtitle>
-    <logo>https://my.cyanzoy.top/images/avatar.png</logo>
-    <icon>https://my.cyanzoy.top/favicon.ico</icon>
+    <logo>http://my.cyanzoy.top/images/avatar.png</logo>
+    <icon>http://my.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
     <entry>
         <title type="html"><![CDATA[第二]]></title>
-        <id>https://my.cyanzoy.top/post/di-er</id>
-        <link href="https://my.cyanzoy.top/post/di-er">
+        <id>http://my.cyanzoy.top/post/di-er</id>
+        <link href="http://my.cyanzoy.top/post/di-er">
         </link>
         <updated>2019-09-17T11:17:50.000Z</updated>
         <summary type="html"><![CDATA[<p>这是摘要</p>
@@ -25,8 +25,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello]]></title>
-        <id>https://my.cyanzoy.top/post/hello</id>
-        <link href="https://my.cyanzoy.top/post/hello">
+        <id>http://my.cyanzoy.top/post/hello</id>
+        <link href="http://my.cyanzoy.top/post/hello">
         </link>
         <updated>2019-09-17T10:31:11.000Z</updated>
         <summary type="html"><![CDATA[<p>content</p>
