@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://maoa-l.github.io</id>
     <title>MAOA-L</title>
-    <updated>2019-09-17T11:01:27.716Z</updated>
+    <updated>2019-09-17T11:04:31.539Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maoa-l.github.io"/>
     <link rel="self" href="https://maoa-l.github.io/atom.xml"/>
@@ -16,9 +16,11 @@
         <link href="https://maoa-l.github.io/post/hello">
         </link>
         <updated>2019-09-17T10:31:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>content</p>
+        <summary type="html"><![CDATA[<p>content<br>
+<img src="https://maoa-l.github.io/post-images/1568718265391.jpg" alt=""></p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>content</p>
+        <content type="html"><![CDATA[<p>content<br>
+<img src="https://maoa-l.github.io/post-images/1568718265391.jpg" alt=""></p>
 <!--more-->
 ]]></content>
     </entry>
