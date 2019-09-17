@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://my.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-17T14:23:04.427Z</updated>
+    <updated>2019-09-17T14:42:21.594Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://my.cyanzoy.top"/>
     <link rel="self" href="http://my.cyanzoy.top/atom.xml"/>
@@ -11,28 +11,29 @@
     <icon>http://my.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
     <entry>
-        <title type="html"><![CDATA[第二]]></title>
-        <id>http://my.cyanzoy.top/post/di-er</id>
-        <link href="http://my.cyanzoy.top/post/di-er">
+        <title type="html"><![CDATA[Git 笔记]]></title>
+        <id>http://my.cyanzoy.top/post/git-bi-ji</id>
+        <link href="http://my.cyanzoy.top/post/git-bi-ji">
         </link>
-        <updated>2019-09-17T11:17:50.000Z</updated>
-        <summary type="html"><![CDATA[<p>这是摘要</p>
+        <updated>2019-09-17T14:29:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>git的一些命令记录</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>这是摘要</p>
+        <content type="html"><![CDATA[<p>git的一些命令记录</p>
 <!-- more -->
-<p>这是内容</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello]]></title>
-        <id>http://my.cyanzoy.top/post/hello</id>
-        <link href="http://my.cyanzoy.top/post/hello">
-        </link>
-        <updated>2019-09-17T10:31:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>content</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>content</p>
-<!--more-->
+<p>🔹Git 添加远程仓库关联<br>
+<code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git</code><br>
+<code>git push -u origin master #这句一般与上句一起用。用于远程仓库没有初始化时</code><br>
+🔸Git 本地分支关联远程分支<br>
+<code>git branch --set-upstream-to=origin/remote_branch your_branch</code><br>
+🔹git删除本地分支<br>
+<code>删除本地分支： git branch -d [branchname]</code><br>
+🔸git删除远程分支<br>
+<code>删除远程分支: git push origin --delete [branchname]</code></p>
+<blockquote>
+<p><code>Q&amp;A</code><br>
+Q: git branch 不显示分支原因<br>
+A: git branch要在git commit后才会显示分支.</p>
+</blockquote>
 ]]></content>
     </entry>
 </feed>

@@ -6,7 +6,7 @@
         <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
         <meta content="telephone=no" name="format-detection"/>
         <meta name="renderer" content="webkit">
-    <title>第二 | MAOA-L</title>
+    <title>Git 笔记 | MAOA-L</title>
 <link href="http://my.cyanzoy.top/styles/main.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="http://my.cyanzoy.top/media/scripts/jquery.js"></script>
 <script type="text/javascript" src="http://my.cyanzoy.top/media/scripts/basic.js"></script>
@@ -19,7 +19,7 @@
      <div class="header">
       <div class="logo_title">
 		  
-        <div class="title animated fadeInDown"><img src="http://my.cyanzoy.top/images/avatar.png?v=1568730183199"/>
+        <div class="title animated fadeInDown"><img src="http://my.cyanzoy.top/images/avatar.png?v=1568731334337"/>
 
           <h1 title="MAOA-L" class="weaklink"><a href="/">MAOA-L</a>
 
@@ -147,7 +147,7 @@
 
 <div class="post">
   <div class="post_title sm_margin">
-    <h2><a>第二</a>
+    <h2><a>Git 笔记</a>
 
 
 
@@ -165,6 +165,8 @@
 <i class="fa fa-bookmark-o"></i>
 <span class="tags_info weaklink">
 	
+	<a href="http://my.cyanzoy.top/tag/6YCSx16wgZ" class="tag">Git</a>
+
 
 </span>
 
@@ -178,9 +180,22 @@
 
 
   <div class="post_content markdown"><p class="md_block">
-    <span class="md_line md_line_start md_line_end"><p>这是摘要</p>
+    <span class="md_line md_line_start md_line_end"><p>git的一些命令记录</p>
 <!-- more -->
-<p>这是内容</p>
+<p>🔹Git 添加远程仓库关联<br>
+<code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git</code><br>
+<code>git push -u origin master #这句一般与上句一起用。用于远程仓库没有初始化时</code><br>
+🔸Git 本地分支关联远程分支<br>
+<code>git branch --set-upstream-to=origin/remote_branch your_branch</code><br>
+🔹git删除本地分支<br>
+<code>删除本地分支： git branch -d [branchname]</code><br>
+🔸git删除远程分支<br>
+<code>删除远程分支: git push origin --delete [branchname]</code></p>
+<blockquote>
+<p><code>Q&amp;A</code><br>
+Q: git branch 不显示分支原因<br>
+A: git branch要在git commit后才会显示分支.</p>
+</blockquote>
 </p>
 
      <p class="md_block">
