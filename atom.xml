@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://maoa-l.github.io</id>
-    <title>Gridea</title>
-    <updated>2019-09-17T10:34:18.799Z</updated>
+    <title>MAOA-L</title>
+    <updated>2019-09-17T10:36:44.431Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://maoa-l.github.io"/>
     <link rel="self" href="https://maoa-l.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>为技术而生</subtitle>
     <logo>https://maoa-l.github.io/images/avatar.png</logo>
     <icon>https://maoa-l.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2019, MAOA-L</rights>
     <entry>
         <title type="html"><![CDATA[Hello]]></title>
         <id>https://maoa-l.github.io/post/hello</id>
