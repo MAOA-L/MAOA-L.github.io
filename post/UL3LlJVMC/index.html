@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://my.cyanzoy.top/favicon.ico?v=1568777692794">
+<link rel="shortcut icon" href="http://my.cyanzoy.top/favicon.ico?v=1568778674922">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://my.cyanzoy.top/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="http://my.cyanzoy.top">
-        <img src="http://my.cyanzoy.top/images/avatar.png?v=1568777692794" class="site-logo">
+        <img src="http://my.cyanzoy.top/images/avatar.png?v=1568778674922" class="site-logo">
         <h1 class="site-title">MAOA-L</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -100,7 +100,7 @@
             
             <div class="post-content">
               <!-- more -->
-<p>使用CAS, update table set v_1 = aa where id = xx and v_1 = old_v_1</p>
+<p>使用CAS, <code>update table set v_1 = aa where id = xx and v_1 = old_v_1</code></p>
 <blockquote>
 <p>CAS ☞ compare/check and swap/set</p>
 </blockquote>
@@ -114,8 +114,9 @@
 线程T2 执行subupdate t set surplus = 90 where id = x and surplus = 100;
 </code></pre>
 <p>这里线程T2执行的时候,库存的100已经不是查询到的100了<br>
-一般的设计中CAS会使用version来控制.<br>
-<code>update t set surplus = 90 ,version = version+1 where id = x and version = oldVersion;</code></p>
+一般的设计中CAS会使用version来控制.</p>
+<pre><code>update t set surplus = 90 ,version = version+1 where id = x and version = oldVersion;
+</code></pre>
 
             </div>
             
