@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://my.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-18T03:55:33.002Z</updated>
+    <updated>2019-09-18T06:34:36.896Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://my.cyanzoy.top"/>
     <link rel="self" href="http://my.cyanzoy.top/atom.xml"/>
@@ -46,15 +46,20 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>git的一些命令记录</p>
 <!-- more -->
-<p>🔹Git 添加远程仓库关联<br>
-<code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git</code><br>
-<code>git push -u origin master #这句一般与上句一起用。用于远程仓库没有初始化时</code><br>
-🔸Git 本地分支关联远程分支<br>
-<code>git branch --set-upstream-to=origin/remote_branch your_branch</code><br>
-🔹Git 删除本地分支<br>
-<code>删除本地分支： git branch -d [branchname]</code><br>
-🔸Git 删除远程分支<br>
-<code>删除远程分支: git push origin --delete [branchname]</code></p>
+<p>🔹Git 添加远程仓库关联</p>
+<pre><code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git
+git push -u origin master 
+#这句一般与上句一起用。用于远程仓库没有初始化时
+</code></pre>
+<p>🔸Git 本地分支关联远程分支</p>
+<pre><code>git branch --set-upstream-to=origin/remote_branch  your_branch
+</code></pre>
+<p>🔹Git 删除本地分支</p>
+<pre><code>git branch -d [branchname]
+</code></pre>
+<p>🔸Git 删除远程分支</p>
+<pre><code>git push origin --delete [branchname]
+</code></pre>
 <blockquote>
 <p><code>Q&amp;A</code><br>
 Q: git branch 不显示分支原因<br>

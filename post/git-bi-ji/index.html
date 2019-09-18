@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://my.cyanzoy.top/favicon.ico?v=1568778674922">
+<link rel="shortcut icon" href="http://my.cyanzoy.top/favicon.ico?v=1568788473336">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://my.cyanzoy.top/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="http://my.cyanzoy.top">
-        <img src="http://my.cyanzoy.top/images/avatar.png?v=1568778674922" class="site-logo">
+        <img src="http://my.cyanzoy.top/images/avatar.png?v=1568788473336" class="site-logo">
         <h1 class="site-title">MAOA-L</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -101,15 +101,20 @@
             <div class="post-content">
               <p>git的一些命令记录</p>
 <!-- more -->
-<p>🔹Git 添加远程仓库关联<br>
-<code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git</code><br>
-<code>git push -u origin master #这句一般与上句一起用。用于远程仓库没有初始化时</code><br>
-🔸Git 本地分支关联远程分支<br>
-<code>git branch --set-upstream-to=origin/remote_branch your_branch</code><br>
-🔹Git 删除本地分支<br>
-<code>删除本地分支： git branch -d [branchname]</code><br>
-🔸Git 删除远程分支<br>
-<code>删除远程分支: git push origin --delete [branchname]</code></p>
+<p>🔹Git 添加远程仓库关联</p>
+<pre><code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git
+git push -u origin master 
+#这句一般与上句一起用。用于远程仓库没有初始化时
+</code></pre>
+<p>🔸Git 本地分支关联远程分支</p>
+<pre><code>git branch --set-upstream-to=origin/remote_branch  your_branch
+</code></pre>
+<p>🔹Git 删除本地分支</p>
+<pre><code>git branch -d [branchname]
+</code></pre>
+<p>🔸Git 删除远程分支</p>
+<pre><code>git push origin --delete [branchname]
+</code></pre>
 <blockquote>
 <p><code>Q&amp;A</code><br>
 Q: git branch 不显示分支原因<br>
