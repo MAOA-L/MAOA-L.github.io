@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://my.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-17T15:07:56.740Z</updated>
+    <updated>2019-09-18T03:34:56.807Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://my.cyanzoy.top"/>
     <link rel="self" href="http://my.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>http://my.cyanzoy.top/images/avatar.png</logo>
     <icon>http://my.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
+    <entry>
+        <title type="html"><![CDATA[扣减库存]]></title>
+        <id>http://my.cyanzoy.top/post/UL3LlJVMC</id>
+        <link href="http://my.cyanzoy.top/post/UL3LlJVMC">
+        </link>
+        <updated>2019-09-18T03:24:31.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>使用CAS, update table set v_1 = aa where id = xx and v_1 = old_v_1</p>
+<blockquote>
+<p>CAS ☞ compare/check and swap/set</p>
+</blockquote>
+<p>上面的方案,可能会出现一个CAS中经典问题. ABA的问题.</p>
+<pre><code>ABA是指:
+线程T1 查询,库存剩余  100
+线程T2 查询,库存剩余  100
+线程T1 执行subupdate t set surplus = 90 where id = x and surplus = 100;
+线程T3 查询, 库存剩余 90
+线程T3 执行add  update t set surplus = 100 where id = x and surplus = 90;
+线程T2 执行subupdate t set surplus = 90 where id = x and surplus = 100;
+</code></pre>
+<p>这里线程T2执行的时候,库存的100已经不是查询到的100了<br>
+一般的设计中CAS会使用version来控制.<br>
+<code>update t set surplus = 90 ,version = version+1 where id = x and version = oldVersion;</code></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Git 笔记]]></title>
         <id>http://my.cyanzoy.top/post/git-bi-ji</id>
