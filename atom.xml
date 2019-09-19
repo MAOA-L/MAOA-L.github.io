@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://my.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-19T03:35:59.593Z</updated>
+    <updated>2019-09-19T06:58:43.715Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://my.cyanzoy.top"/>
     <link rel="self" href="http://my.cyanzoy.top/atom.xml"/>
@@ -16,31 +16,35 @@
         <link href="http://my.cyanzoy.top/post/9XwZQILat">
         </link>
         <updated>2019-09-19T02:55:54.000Z</updated>
-        <summary type="html"><![CDATA[<p>防盗链<br>
-根据文件类型设置过期时间<br>
-静态资源访问<br>
-日志配置<br>
-日志字段说明<br>
-access_log 访问日志<br>
-error_log 日志<br>
-日志切割<br>
-反向代理<br>
-禁止指定user_agent<br>
-nginx访问控制<br>
-负载均衡</p>
+        <summary type="html"><![CDATA[<ul>
+<li>防盗链</li>
+<li>根据文件类型设置过期时间</li>
+<li>静态资源访问</li>
+<li>日志配置</li>
+<li>日志字段说明</li>
+<li>access_log 访问日志</li>
+<li>error_log 日志</li>
+<li>日志切割</li>
+<li>反向代理</li>
+<li>禁止指定user_agent</li>
+<li>nginx访问控制</li>
+<li>负载均衡</li>
+</ul>
 ]]></summary>
-        <content type="html"><![CDATA[<p>防盗链<br>
-根据文件类型设置过期时间<br>
-静态资源访问<br>
-日志配置<br>
-日志字段说明<br>
-access_log 访问日志<br>
-error_log 日志<br>
-日志切割<br>
-反向代理<br>
-禁止指定user_agent<br>
-nginx访问控制<br>
-负载均衡</p>
+        <content type="html"><![CDATA[<ul>
+<li>防盗链</li>
+<li>根据文件类型设置过期时间</li>
+<li>静态资源访问</li>
+<li>日志配置</li>
+<li>日志字段说明</li>
+<li>access_log 访问日志</li>
+<li>error_log 日志</li>
+<li>日志切割</li>
+<li>反向代理</li>
+<li>禁止指定user_agent</li>
+<li>nginx访问控制</li>
+<li>负载均衡</li>
+</ul>
 <!-- more -->
 <h2 id="防盗链">防盗链</h2>
 <pre><code>location ~* \.(gif|jpg|png)$ {
@@ -105,8 +109,7 @@ location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
 </code></pre>
 <h2 id="日志配置">日志配置</h2>
 <h3 id="日志字段说明">日志字段说明</h3>
-<pre><code>{
-remote_addr 和 http_x_forwarded_for ▶ 客户端 IP 地址
+<pre><code>remote_addr 和 http_x_forwarded_for ▶ 客户端 IP 地址
 remote_user ▶ 客户端用户名称
 request ▶ 请求的 URI 和 HTTP 协议
 status ▶ 请求状态
@@ -121,7 +124,6 @@ http_user_agent ▶ 记录客户端浏览器相关信息
 request_length ▶ 请求的长度(包括请求行，请求头和请求正文)
 time_iso8601 ▶ ISO8601标准格式下的本地时间
 time_local ▶ 记录访问时间与时区
-}
 </code></pre>
 <h2 id="access_log-访问日志">access_log 访问日志</h2>
 <pre><code>http {
