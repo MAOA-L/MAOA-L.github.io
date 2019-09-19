@@ -1,35 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://my.cyanzoy.top</id>
-    <title>MAOA-L</title>
-    <updated>2019-09-19T03:20:33.633Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://my.cyanzoy.top"/>
-    <link rel="self" href="http://my.cyanzoy.top/atom.xml"/>
-    <subtitle>为技术而生</subtitle>
-    <logo>http://my.cyanzoy.top/images/avatar.png</logo>
-    <icon>http://my.cyanzoy.top/favicon.ico</icon>
-    <rights>All rights reserved 2019, MAOA-L</rights>
-    <entry>
-        <title type="html"><![CDATA[后端必备 Nginx 配置]]></title>
-        <id>http://my.cyanzoy.top/post/9XwZQILat</id>
-        <link href="http://my.cyanzoy.top/post/9XwZQILat">
-        </link>
-        <updated>2019-09-19T02:55:54.000Z</updated>
-        <summary type="html"><![CDATA[<p>防盗链<br>
-根据文件类型设置过期时间<br>
-静态资源访问<br>
-日志配置<br>
-日志字段说明<br>
-access_log 访问日志<br>
-error_log 日志<br>
-日志切割<br>
-反向代理<br>
-禁止指定user_agent<br>
-nginx访问控制<br>
-负载均衡</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>防盗链<br>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>后端必备 Nginx 配置 | MAOA-L</title>
+<meta name="description" content="为技术而生">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://my.cyanzoy.top/favicon.ico?v=1568863016806">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://my.cyanzoy.top/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://my.cyanzoy.top">
+        <img src="http://my.cyanzoy.top/images/avatar.png?v=1568863016806" class="site-logo">
+        <h1 class="site-title">MAOA-L</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      为技术而生
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="http://my.cyanzoy.top/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">后端必备 Nginx 配置</h2>
+            <div class="post-date">2019-09-19</div>
+            
+            <div class="post-content">
+              <p>防盗链<br>
 根据文件类型设置过期时间<br>
 静态资源访问<br>
 日志配置<br>
@@ -201,63 +268,47 @@ location ~ .*admin\.php$ {
     }
 }
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[扣减库存]]></title>
-        <id>http://my.cyanzoy.top/post/UL3LlJVMC</id>
-        <link href="http://my.cyanzoy.top/post/UL3LlJVMC">
-        </link>
-        <updated>2019-09-18T03:24:31.000Z</updated>
-        <content type="html"><![CDATA[<!-- more -->
-<p>使用CAS, <code>update table set v_1 = aa where id = xx and v_1 = old_v_1</code></p>
-<blockquote>
-<p>CAS ☞ compare/check and swap/set</p>
-</blockquote>
-<p>上面的方案,可能会出现一个CAS中经典问题. ABA的问题.</p>
-<pre><code>ABA是指:
-线程T1 查询,库存剩余  100
-线程T2 查询,库存剩余  100
-线程T1 执行subupdate t set surplus = 90 where id = x and surplus = 100;
-线程T3 查询, 库存剩余 90
-线程T3 执行add  update t set surplus = 100 where id = x and surplus = 90;
-线程T2 执行subupdate t set surplus = 90 where id = x and surplus = 100;
-</code></pre>
-<p>这里线程T2执行的时候,库存的100已经不是查询到的100了<br>
-一般的设计中CAS会使用version来控制.</p>
-<pre><code>update t set surplus = 90 ,version = version+1 where id = x and version = oldVersion;
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Git 笔记]]></title>
-        <id>http://my.cyanzoy.top/post/git-bi-ji</id>
-        <link href="http://my.cyanzoy.top/post/git-bi-ji">
-        </link>
-        <updated>2019-09-17T14:29:28.000Z</updated>
-        <summary type="html"><![CDATA[<p>git的一些命令记录</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>git的一些命令记录</p>
-<!-- more -->
-<p>🔹Git 添加远程仓库关联</p>
-<pre><code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git
-git push -u origin master 
-#这句一般与上句一起用。用于远程仓库没有初始化时
-</code></pre>
-<p>🔸Git 本地分支关联远程分支</p>
-<pre><code>git branch --set-upstream-to=origin/remote_branch  your_branch
-</code></pre>
-<p>🔹Git 删除本地分支</p>
-<pre><code>git branch -d [branchname]
-</code></pre>
-<p>🔸Git 删除远程分支</p>
-<pre><code>git push origin --delete [branchname]
-</code></pre>
-<blockquote>
-<p><code>Q&amp;A</code><br>
-Q: git branch 不显示分支原因<br>
-A: git branch要在git commit后才会显示分支.</p>
-</blockquote>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://my.cyanzoy.top/post/UL3LlJVMC">
+                  <h3 class="post-title">
+                    扣减库存
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
