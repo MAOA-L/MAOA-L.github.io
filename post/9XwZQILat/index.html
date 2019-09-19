@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://my.cyanzoy.top/favicon.ico?v=1568863945671">
+<link rel="shortcut icon" href="http://my.cyanzoy.top/favicon.ico?v=1568864108915">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="http://my.cyanzoy.top/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="http://my.cyanzoy.top">
-        <img src="http://my.cyanzoy.top/images/avatar.png?v=1568863945671" class="site-logo">
+        <img src="http://my.cyanzoy.top/images/avatar.png?v=1568864108915" class="site-logo">
         <h1 class="site-title">MAOA-L</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -175,7 +175,8 @@ location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
 </code></pre>
 <h2 id="日志配置">日志配置</h2>
 <h3 id="日志字段说明">日志字段说明</h3>
-<pre><code>remote_addr 和 http_x_forwarded_for ▶ 客户端 IP 地址
+<pre><code>{
+remote_addr 和 http_x_forwarded_for ▶ 客户端 IP 地址
 remote_user ▶ 客户端用户名称
 request ▶ 请求的 URI 和 HTTP 协议
 status ▶ 请求状态
@@ -190,6 +191,7 @@ http_user_agent ▶ 记录客户端浏览器相关信息
 request_length ▶ 请求的长度(包括请求行，请求头和请求正文)
 time_iso8601 ▶ ISO8601标准格式下的本地时间
 time_local ▶ 记录访问时间与时区
+}
 </code></pre>
 <h2 id="access_log-访问日志">access_log 访问日志</h2>
 <pre><code>http {
