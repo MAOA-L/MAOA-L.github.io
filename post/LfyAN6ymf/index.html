@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Git 笔记 | MAOA-L</title>
+<title>数据库 | MAOA-L</title>
 <meta name="description" content="为技术而生">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,47 +92,76 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Git 笔记</h2>
-            <div class="post-date">2019-09-17</div>
+            <h2 class="post-title">数据库</h2>
+            <div class="post-date">2019-09-23</div>
             
-              <div class="feature-container" style="background-image: url('http://my.cyanzoy.top/post-images/git-bi-ji.jpg')">
+              <div class="feature-container" style="background-image: url('http://my.cyanzoy.top/post-images/LfyAN6ymf.jpg')">
               </div>
             
             <div class="post-content">
-              <p>git的一些命令记录</p>
+              <p>一系列命令</p>
 <!-- more -->
-<p>🔹Git 添加远程仓库关联</p>
-<pre><code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git
-git push -u origin master 
-#这句一般与上句一起用。用于远程仓库没有初始化时
+<p>一系列命令</p>
+<!-- more -->
+<h1 id="创建用户授权设更改加密模式">创建用户，授权，设更改加密模式</h1>
+<h1 id="创建账号">创建账号</h1>
+<pre><code>CREATE USER 'username'@'host' IDENTIFIED BY 'password';
 </code></pre>
-<p>🔸Git 本地分支关联远程分支</p>
-<pre><code>git branch --set-upstream-to=origin/remote_branch  your_branch
+<h1 id="授权">授权</h1>
+<pre><code>GRANT privileges ON databasename.tablename TO 'username'@'host'
+GRANT ALL ON databasename.* TO 'username'@'host'
+说明:
+privileges：用户的操作权限，如SELECT，INSERT，UPDATE等，如果要授予所的权限则使用ALL 
+databasename：数据库名
+tablename：表名，如果要授予该用户对所有数据库和表的相应操作权限则可用表示，如.*
+注意:
+用以上命令授权的用户不能给其它用户授权，如果想让该用户可以授权，用以下命令:
+GRANT privileges ON databasename.tablename TO 'username'@'host' WITH GRANT OPTION;
 </code></pre>
-<p>🔹Git 删除本地分支</p>
-<pre><code>git branch -d [branchname]
+<h1 id="设置与更改用户密码">设置与更改用户密码</h1>
+<pre><code>命令:
+SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');
+如果是当前登陆用户用:
+SET PASSWORD = PASSWORD(&quot;newpassword&quot;);
+例子:
+SET PASSWORD FOR 'pig'@'%' = PASSWORD(&quot;123456&quot;);
 </code></pre>
-<p>🔸Git 删除远程分支</p>
-<pre><code>git push origin --delete [branchname]
+<h1 id="撤销用户权限">撤销用户权限</h1>
+<pre><code>REVOKE privilege ON databasename.tablename FROM 'username'@'host';
+说明:
+privilege, databasename, tablename：同授权部分
+例子:
+REVOKE SELECT ON *.* FROM 'pig'@'%';
+假如你在给用户 'pig'@ '%'授权的时候是这样的（或类似的）：GRANT SELECT ON test.user TO 'pig'@'%'，则在使用REVOKE SELECT ON . FROM 'pig'@'%';命令并不能撤销该用户对test数据库中user表的SELECT 操作。相反，如果授权使用的是GRANT SELECT ON . TO 'pig'@'%';则REVOKE SELECT ON test.user FROM 'pig'@'%';命令也不能撤销该用户对test数据库中user表的Select权限。
+具体信息可以用命令SHOW GRANTS FOR 'pig'@'%'; 查看。
 </code></pre>
-<blockquote>
-<p><code>Q&amp;A</code><br>
-🧐: git branch 不显示分支原因<br>
-🤪: git branch要在git commit后才会显示分支.<br>
-🧐:nginx的location、root、alias指令用法和区别<br>
-🤪:</p>
-</blockquote>
+<h1 id="删除用户">删除用户</h1>
+<pre><code>DROP USER 'username'@'host';
+</code></pre>
+<h1 id="mysql8-加密方式不同如有需要可运行下面这句进行更改">mysql8 加密方式不同，如有需要可运行下面这句进行更改</h1>
+<pre><code>ALTER USER 'tone'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+FLUSH PRIVILEGES; 
+</code></pre>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="http://my.cyanzoy.top/tag/6YCSx16wgZ" class="tag">
-                    Git
+                  <a href="http://my.cyanzoy.top/tag/D2qHV6XSv" class="tag">
+                    MySQL
                   </a>
                 
               </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://my.cyanzoy.top/post/9XwZQILat">
+                  <h3 class="post-title">
+                    后端必备 Nginx 配置
+                  </h3>
+                </a>
+              </div>
             
 
             

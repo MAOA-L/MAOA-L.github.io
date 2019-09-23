@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://my.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-19T07:09:43.122Z</updated>
+    <updated>2019-09-23T08:13:29.110Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://my.cyanzoy.top"/>
     <link rel="self" href="http://my.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,59 @@
     <logo>http://my.cyanzoy.top/images/avatar.png</logo>
     <icon>http://my.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
+    <entry>
+        <title type="html"><![CDATA[数据库]]></title>
+        <id>http://my.cyanzoy.top/post/LfyAN6ymf</id>
+        <link href="http://my.cyanzoy.top/post/LfyAN6ymf">
+        </link>
+        <updated>2019-09-23T07:59:06.000Z</updated>
+        <summary type="html"><![CDATA[<p>一系列命令</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一系列命令</p>
+<!-- more -->
+<p>一系列命令</p>
+<!-- more -->
+<h1 id="创建用户授权设更改加密模式">创建用户，授权，设更改加密模式</h1>
+<h1 id="创建账号">创建账号</h1>
+<pre><code>CREATE USER 'username'@'host' IDENTIFIED BY 'password';
+</code></pre>
+<h1 id="授权">授权</h1>
+<pre><code>GRANT privileges ON databasename.tablename TO 'username'@'host'
+GRANT ALL ON databasename.* TO 'username'@'host'
+说明:
+privileges：用户的操作权限，如SELECT，INSERT，UPDATE等，如果要授予所的权限则使用ALL 
+databasename：数据库名
+tablename：表名，如果要授予该用户对所有数据库和表的相应操作权限则可用表示，如.*
+注意:
+用以上命令授权的用户不能给其它用户授权，如果想让该用户可以授权，用以下命令:
+GRANT privileges ON databasename.tablename TO 'username'@'host' WITH GRANT OPTION;
+</code></pre>
+<h1 id="设置与更改用户密码">设置与更改用户密码</h1>
+<pre><code>命令:
+SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');
+如果是当前登陆用户用:
+SET PASSWORD = PASSWORD(&quot;newpassword&quot;);
+例子:
+SET PASSWORD FOR 'pig'@'%' = PASSWORD(&quot;123456&quot;);
+</code></pre>
+<h1 id="撤销用户权限">撤销用户权限</h1>
+<pre><code>REVOKE privilege ON databasename.tablename FROM 'username'@'host';
+说明:
+privilege, databasename, tablename：同授权部分
+例子:
+REVOKE SELECT ON *.* FROM 'pig'@'%';
+假如你在给用户 'pig'@ '%'授权的时候是这样的（或类似的）：GRANT SELECT ON test.user TO 'pig'@'%'，则在使用REVOKE SELECT ON . FROM 'pig'@'%';命令并不能撤销该用户对test数据库中user表的SELECT 操作。相反，如果授权使用的是GRANT SELECT ON . TO 'pig'@'%';则REVOKE SELECT ON test.user FROM 'pig'@'%';命令也不能撤销该用户对test数据库中user表的Select权限。
+具体信息可以用命令SHOW GRANTS FOR 'pig'@'%'; 查看。
+</code></pre>
+<h1 id="删除用户">删除用户</h1>
+<pre><code>DROP USER 'username'@'host';
+</code></pre>
+<h1 id="mysql8-加密方式不同如有需要可运行下面这句进行更改">mysql8 加密方式不同，如有需要可运行下面这句进行更改</h1>
+<pre><code>ALTER USER 'tone'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
+FLUSH PRIVILEGES; 
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[后端必备 Nginx 配置]]></title>
         <id>http://my.cyanzoy.top/post/9XwZQILat</id>
