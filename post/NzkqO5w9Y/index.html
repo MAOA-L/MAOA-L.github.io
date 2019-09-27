@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Git | MAOA-L</title>
+<title>Nginx安装 | MAOA-L</title>
 <meta name="description" content="为技术而生">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -173,38 +173,38 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Git</h2>
-          
-            <!-- Note -->
-            <article class="post-item">
-              <!-- 是否包含图片 -->
-              
-                <div class="art-bg">
-                  <div class="feature-container" style="background-image: url('http://106.13.163.103/post-images/git-bi-ji.jpg')"></div>
-                </div>
-              
+          <div class="post-detail">
+            <h2 class="post-title">Nginx安装</h2>
+            <div class="post-date">2019-09-27</div>
+            
+            <div class="post-content">
+              <p>简介记录nginx的安装</p>
+<!-- more -->
+<h1 id="需要的依赖环境">需要的依赖环境</h1>
+<pre><code>yum -y install pcre pcre-devel
+yum install openssl openssl-devel
+</code></pre>
+<h1 id="编译-安装">编译 &amp;&amp; 安装</h1>
+<pre><code>./configure --prefix=/usr/local/nginx --with-http_ssl_module
+make &amp;&amp; make install
+</code></pre>
 
-              <div class="post-con">
-                <!-- 标题 -->
-                <a href="http://106.13.163.103/post/git-bi-ji">
-                  <h2 class="post-title">Git 笔记</h2>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://106.13.163.103/post/LfyAN6ymf">
+                  <h3 class="post-title">
+                    数据库
+                  </h3>
                 </a>
-                <!-- 时间与标注 -->
-                <div class="post-info">
-                  2019-09-17
-                  <span>•</span>
-                  Git
-                </div>
               </div>
-              
+            
 
-            </article>
-          
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+          </div>
 
         </div>
       </div>
@@ -282,5 +282,17 @@ var app = new Vue({
 
 
 
+    <script>
+      //添加SVG代码
+      var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="14" viewBox="20"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle></g></svg>';
+      var code = document.querySelectorAll(".post-content pre code");
+      for(var i=0; i<code.length; i++){
+          code[i].insertAdjacentHTML("beforebegin", svg);
+      }
+      //注册添加Class
+      $('.post-detail h1,h2,h3,h4,h5').addClass("iconfont");
+
+
+    </script>
   </body>
 </html>
