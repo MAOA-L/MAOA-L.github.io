@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://my.cyanzoy.top</id>
+    <id>http://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-23T09:49:14.764Z</updated>
+    <updated>2019-09-27T02:31:25.872Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://my.cyanzoy.top"/>
-    <link rel="self" href="http://my.cyanzoy.top/atom.xml"/>
+    <link rel="alternate" href="http://blog.cyanzoy.top"/>
+    <link rel="self" href="http://blog.cyanzoy.top/atom.xml"/>
     <subtitle>为技术而生</subtitle>
-    <logo>http://my.cyanzoy.top/images/avatar.png</logo>
-    <icon>http://my.cyanzoy.top/favicon.ico</icon>
+    <logo>http://blog.cyanzoy.top/images/avatar.png</logo>
+    <icon>http://blog.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
     <entry>
         <title type="html"><![CDATA[数据库]]></title>
-        <id>http://my.cyanzoy.top/post/LfyAN6ymf</id>
-        <link href="http://my.cyanzoy.top/post/LfyAN6ymf">
+        <id>http://blog.cyanzoy.top/post/LfyAN6ymf</id>
+        <link href="http://blog.cyanzoy.top/post/LfyAN6ymf">
         </link>
         <updated>2019-09-23T07:59:06.000Z</updated>
         <summary type="html"><![CDATA[<p>一系列命令</p>
@@ -65,8 +65,8 @@ FLUSH PRIVILEGES;
     </entry>
     <entry>
         <title type="html"><![CDATA[后端必备 Nginx 配置]]></title>
-        <id>http://my.cyanzoy.top/post/9XwZQILat</id>
-        <link href="http://my.cyanzoy.top/post/9XwZQILat">
+        <id>http://blog.cyanzoy.top/post/9XwZQILat</id>
+        <link href="http://blog.cyanzoy.top/post/9XwZQILat">
         </link>
         <updated>2019-09-19T02:55:54.000Z</updated>
         <summary type="html"><![CDATA[<ul>
@@ -278,8 +278,8 @@ location ~ .*admin\.php$ {
     </entry>
     <entry>
         <title type="html"><![CDATA[扣减库存]]></title>
-        <id>http://my.cyanzoy.top/post/UL3LlJVMC</id>
-        <link href="http://my.cyanzoy.top/post/UL3LlJVMC">
+        <id>http://blog.cyanzoy.top/post/UL3LlJVMC</id>
+        <link href="http://blog.cyanzoy.top/post/UL3LlJVMC">
         </link>
         <updated>2019-09-18T03:24:31.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -304,8 +304,8 @@ location ~ .*admin\.php$ {
     </entry>
     <entry>
         <title type="html"><![CDATA[Git 笔记]]></title>
-        <id>http://my.cyanzoy.top/post/git-bi-ji</id>
-        <link href="http://my.cyanzoy.top/post/git-bi-ji">
+        <id>http://blog.cyanzoy.top/post/git-bi-ji</id>
+        <link href="http://blog.cyanzoy.top/post/git-bi-ji">
         </link>
         <updated>2019-09-17T14:29:28.000Z</updated>
         <summary type="html"><![CDATA[<p>git的一些命令记录</p>
