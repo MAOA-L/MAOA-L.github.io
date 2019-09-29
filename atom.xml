@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-29T06:34:20.768Z</updated>
+    <updated>2019-09-29T06:57:28.160Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.cyanzoy.top"/>
     <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
@@ -346,6 +346,64 @@ location ~ .*admin\.php$ {
             proxy_pass  http://test.net;
         }
     }
+}
+</code></pre>
+<h1 id="nginx的rewrite">Nginx的rewrite</h1>
+<h2 id="rewite">rewite</h2>
+<p>在<code>server</code>块下，会优先执行<code>rewrite</code>部分，然后才会去匹配<code>location</code>块<br>
+<code>server</code>中的<code>rewrite break</code>和<code>last</code>没什么区别，都会去匹配<code>location</code>，所以没必要用<code>last</code>再发起新的请求，可以留空</p>
+<h2 id="location中的rewirte">location中的rewirte：</h2>
+<p>不写last和break - 那么流程就是依次执行这些rewrite</p>
+<ol>
+<li><code>rewrite break</code> - url重写后，直接使用当前资源，不再执行location里余下的语句，完成本次请求，地址栏url不变</li>
+<li><code>rewrite last</code> - url重写后，马上发起一个新的请求，再次进入server块，重试location匹配，超过10次匹配不到报500错误，地址栏url不变</li>
+<li><code>rewrite redirect</code> – 返回302临时重定向，地址栏显示重定向后的url，爬虫不会更新url（因为是临时）</li>
+<li><code>rewrite permanent</code> – 返回301永久重定向, 地址栏显示重定向后的url，爬虫更新url</li>
+</ol>
+<h2 id="使用last会对server标签重新发起请求">使用last会对server标签重新发起请求</h2>
+<ul>
+<li>如果location中rewrite后是对静态资源的请求，不需要再进行其他匹配，一般要使用break或不写，直接使用当前location中的数据源，完成本次请求</li>
+<li>如果location中rewrite后，还需要进行其他处理，如动态fastcgi请求(.php,.jsp)等，要用last继续发起新的请求</li>
+<li>(根的location使用last比较好, 因为如果有.php等fastcgi请求还要继续处理)</li>
+<li>使用alias指定源：必须使用last</li>
+<li>if语句主要用来判断一些在rewrite语句中无法直接匹配的条件,比如检测文件存在与否,http header,cookie等</li>
+</ul>
+<h2 id="location匹配规则及优先级">location匹配规则及优先级</h2>
+<table>
+<thead>
+<tr>
+<th>匹配规则</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>严格匹配这个查询。如果找到，停止搜索。</td>
+</tr>
+<tr>
+<td>^~</td>
+<td>匹配路径的前缀，如果找到，停止搜索。</td>
+</tr>
+<tr>
+<td>~</td>
+<td>为区分大小写的正则匹配</td>
+</tr>
+<tr>
+<td>~*</td>
+<td>为不区分大小写匹配</td>
+</tr>
+<tr>
+<td>优先级：</td>
+<td>=, ^~, <sub>/</sub>*, 无</td>
+</tr>
+</tbody>
+</table>
+<h2 id="break语句">break语句</h2>
+<p>放在<code>server</code>块<code>rewrite</code>语句前面<br>
+如果是直接请求某个真实存在的文件,则用break语句停止rewrite检查</p>
+<pre><code>if (-f $request_filename) { 
+    break; 
 }
 </code></pre>
 ]]></content>
