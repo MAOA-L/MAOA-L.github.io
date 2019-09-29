@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-29T07:00:34.204Z</updated>
+    <updated>2019-09-29T07:21:23.543Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.cyanzoy.top"/>
     <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
@@ -92,19 +92,18 @@ FLUSH PRIVILEGES;
         <summary type="html"><![CDATA[<ul>
 <li>防盗链</li>
 <li>根据文件类型设置过期时间</li>
-<li>静态资源访问</li>
-<li>日志配置</li>
-<li>日志字段说明</li>
-<li>access_log 访问日志</li>
-<li>error_log 日志</li>
-<li>日志切割</li>
-<li>反向代理</li>
-<li>禁止指定user_agent</li>
-<li>nginx访问控制</li>
-<li>负载均衡</li>
+<li>静态资源访问<br>
+···</li>
 </ul>
 ]]></summary>
         <content type="html"><![CDATA[<ul>
+<li>防盗链</li>
+<li>根据文件类型设置过期时间</li>
+<li>静态资源访问<br>
+···</li>
+</ul>
+<!-- more -->
+<ul>
 <li>防盗链</li>
 <li>根据文件类型设置过期时间</li>
 <li>静态资源访问</li>
@@ -117,8 +116,8 @@ FLUSH PRIVILEGES;
 <li>禁止指定user_agent</li>
 <li>nginx访问控制</li>
 <li>负载均衡</li>
+<li>Nginx的rewrite</li>
 </ul>
-<!-- more -->
 <h2 id="防盗链">防盗链</h2>
 <pre><code>location ~* \.(gif|jpg|png)$ {
     # 只允许 192.168.0.1 请求资源
