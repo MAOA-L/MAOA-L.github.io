@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://106.13.163.103</id>
+    <id>http://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-27T10:41:08.628Z</updated>
+    <updated>2019-09-29T06:15:06.410Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://106.13.163.103"/>
-    <link rel="self" href="http://106.13.163.103/atom.xml"/>
+    <link rel="alternate" href="http://blog.cyanzoy.top"/>
+    <link rel="self" href="http://blog.cyanzoy.top/atom.xml"/>
     <subtitle>为技术而生</subtitle>
-    <logo>http://106.13.163.103/images/avatar.png</logo>
-    <icon>http://106.13.163.103/favicon.ico</icon>
+    <logo>http://blog.cyanzoy.top/images/avatar.png</logo>
+    <icon>http://blog.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
     <entry>
         <title type="html"><![CDATA[Nginx安装]]></title>
-        <id>http://106.13.163.103/post/NzkqO5w9Y</id>
-        <link href="http://106.13.163.103/post/NzkqO5w9Y">
+        <id>http://blog.cyanzoy.top/post/NzkqO5w9Y</id>
+        <link href="http://blog.cyanzoy.top/post/NzkqO5w9Y">
         </link>
         <updated>2019-09-27T09:02:15.000Z</updated>
         <summary type="html"><![CDATA[<p>简介记录nginx的安装</p>
@@ -32,8 +32,8 @@ make &amp;&amp; make install
     </entry>
     <entry>
         <title type="html"><![CDATA[数据库]]></title>
-        <id>http://106.13.163.103/post/LfyAN6ymf</id>
-        <link href="http://106.13.163.103/post/LfyAN6ymf">
+        <id>http://blog.cyanzoy.top/post/LfyAN6ymf</id>
+        <link href="http://blog.cyanzoy.top/post/LfyAN6ymf">
         </link>
         <updated>2019-09-23T07:59:06.000Z</updated>
         <summary type="html"><![CDATA[<p>一系列命令</p>
@@ -85,8 +85,8 @@ FLUSH PRIVILEGES;
     </entry>
     <entry>
         <title type="html"><![CDATA[后端必备 Nginx 配置]]></title>
-        <id>http://106.13.163.103/post/9XwZQILat</id>
-        <link href="http://106.13.163.103/post/9XwZQILat">
+        <id>http://blog.cyanzoy.top/post/9XwZQILat</id>
+        <link href="http://blog.cyanzoy.top/post/9XwZQILat">
         </link>
         <updated>2019-09-19T02:55:54.000Z</updated>
         <summary type="html"><![CDATA[<ul>
@@ -352,8 +352,8 @@ location ~ .*admin\.php$ {
     </entry>
     <entry>
         <title type="html"><![CDATA[扣减库存]]></title>
-        <id>http://106.13.163.103/post/UL3LlJVMC</id>
-        <link href="http://106.13.163.103/post/UL3LlJVMC">
+        <id>http://blog.cyanzoy.top/post/UL3LlJVMC</id>
+        <link href="http://blog.cyanzoy.top/post/UL3LlJVMC">
         </link>
         <updated>2019-09-18T03:24:31.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -378,8 +378,8 @@ location ~ .*admin\.php$ {
     </entry>
     <entry>
         <title type="html"><![CDATA[Git 笔记]]></title>
-        <id>http://106.13.163.103/post/git-bi-ji</id>
-        <link href="http://106.13.163.103/post/git-bi-ji">
+        <id>http://blog.cyanzoy.top/post/git-bi-ji</id>
+        <link href="http://blog.cyanzoy.top/post/git-bi-ji">
         </link>
         <updated>2019-09-17T14:29:28.000Z</updated>
         <summary type="html"><![CDATA[<p>git的一些命令记录</p>
