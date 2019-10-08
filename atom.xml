@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-09-29T09:48:26.285Z</updated>
+    <updated>2019-10-08T02:54:20.910Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.cyanzoy.top"/>
     <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
@@ -104,9 +104,6 @@ FLUSH PRIVILEGES;
 </ul>
 <!-- more -->
 <ul>
-<li>防盗链</li>
-<li>根据文件类型设置过期时间</li>
-<li>静态资源访问</li>
 <li>日志配置</li>
 <li>日志字段说明</li>
 <li>access_log 访问日志</li>
