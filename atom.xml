@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-08T02:55:29.094Z</updated>
+    <updated>2019-10-08T08:23:35.160Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.cyanzoy.top"/>
     <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,165 @@
     <logo>https://blog.cyanzoy.top/images/avatar.png</logo>
     <icon>https://blog.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
+    <entry>
+        <title type="html"><![CDATA[uwsgi启动django服务]]></title>
+        <id>https://blog.cyanzoy.top/post/_7T3uDhTS</id>
+        <link href="https://blog.cyanzoy.top/post/_7T3uDhTS">
+        </link>
+        <updated>2019-10-08T07:25:14.000Z</updated>
+        <summary type="html"><![CDATA[<p>脚本列表<br>
+启动django服务用的Uwsgi的ini启动配置文件,启动脚本,自定义service脚本</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>脚本列表<br>
+启动django服务用的Uwsgi的ini启动配置文件,启动脚本,自定义service脚本</p>
+<!-- more -->
+<h1 id="uwsgiini">uwsgi.ini</h1>
+<pre><code class="language-ini"># uwsgi 配置文件
+[uwsgi]
+#端口
+socket = 127.0.0.1:8000
+# django项目绝对路径
+chdir = /home/centos/project/diary
+# 模块路径（项目名称.wsgi）可以理解为wsgi.py的位置
+module = diary.wsgi
+# 允许主进程
+master = true
+#最多进程数
+processes  = 4
+# 退出时候回收pid文件
+vacuum = true
+#日志大小配置500M
+log-maxsize = 500000000 
+#记录日志配置
+logto = /home/centos/project/logs/uwsgi8000.log
+pidfile = /home/centos/project/logs/uwsgi8000.pid
+
+#[uwsgi]
+#socket = :8000
+#master = true
+#vhost = true
+#gid = nginx
+#uid = nginx
+#no-stie = true
+#enable-threads = true
+#workers = 2
+#reload-mercy = 10
+#vacuum = true
+#max-requests = 1000
+#limit-as = 512
+#buffer-sizi = 30000
+#pidfile = /var/run/uwsgi8000diary.pid
+#daemonize = /home/centos/project/logs/diary/uwsgi.log
+#wsgi-file = /home/centos/project/diary/diary/wsgi.py
+#chdir = /home/centos/project/diary
+#module=diary.wsgi:application
+#virtualenv = /usr/local/python3.7
+#vacuum = True
+</code></pre>
+<h1 id="启动脚本-etcinitd">启动脚本 /etc/init.d/</h1>
+<pre><code class="language-bash">#! /bin/sh
+# chkconfig: 2345 55 25
+# Description: Startup script for uwsgi webserver on Debian. Place in /etc/init.d and
+# run 'update-rc.d -f uwsgi defaults', or use the appropriate command on your
+# distro. For CentOS/Redhat run: 'chkconfig --add uwsgi'
+
+### BEGIN INIT INFO
+# Provides:          uwsgi
+# Required-Start:    $all
+# Required-Stop:     $all
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: starts the uwsgi web server
+# Description:       starts uwsgi using start-stop-daemon
+### END INIT INFO
+
+# Author:   licess
+# website:  http://lnmp.org
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/python3.7/bin
+DESC=&quot;uwsgi daemon&quot;
+NAME=uwsgi8000diary
+DAEMON=/usr/bin/uwsgi
+CONFIGFILE=/home/centos/project/confini/$NAME.ini
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+
+set -e
+[ -x &quot;$DAEMON&quot; ] || exit 0
+
+do_start() {
+    $DAEMON --ini $CONFIGFILE || echo -n &quot;uwsgi already running&quot;
+}
+
+do_stop() {
+    $DAEMON --stop $PIDFILE || echo -n &quot;uwsgi not running&quot;
+    rm -f $PIDFILE
+    echo &quot;$DAEMON STOPED.&quot;
+}
+
+do_reload() {
+    $DAEMON --reload $PIDFILE || echo -n &quot;uwsgi can't reload&quot;
+}
+
+do_status() {
+    ps aux|grep $DAEMON
+}
+
+case &quot;$1&quot; in
+ status)
+    echo -en &quot;Status $NAME: \n&quot;
+    do_status
+ ;;
+ start)
+    echo -en &quot;Starting $NAME: \n&quot;
+    do_start
+ ;;
+ stop)
+    echo -en &quot;Stopping $NAME: \n&quot;
+    do_stop
+ ;;
+ reload|graceful)
+    echo -en &quot;Reloading $NAME: \n&quot;
+    do_reload
+ ;;
+ *)
+    echo &quot;Usage: $SCRIPTNAME {start|stop|reload}&quot; &gt;&amp;2
+    exit 3
+ ;;
+esac
+
+exit 0
+
+</code></pre>
+<h1 id="service-脚本-usrlibsystemdsystem">service 脚本 /usr/lib/systemd/system/</h1>
+<pre><code class="language-ini">[Unit]
+Documentation=man:systemd-sysv-generator(8)
+SourcePath=/etc/rc.d/init.d/uwsgi9500_meetbuy
+Description=LSB: starts the uwsgi web server
+Before=runlevel2.target
+Before=runlevel3.target
+Before=runlevel4.target
+Before=runlevel5.target
+Before=shutdown.target
+Before=agentwatch.service
+After=all.target
+After=network-online.target
+Conflicts=shutdown.target
+
+[Service]
+Type=forking
+Restart=no
+TimeoutSec=5min
+IgnoreSIGPIPE=no
+KillMode=process
+GuessMainPID=no
+RemainAfterExit=yes
+ExecStart=/etc/rc.d/init.d/uwsgi9500_meetbuy start
+ExecStop=/etc/rc.d/init.d/uwsgi9500_meetbuy stop
+ExecReload=/etc/rc.d/init.d/uwsgi9500_meetbuy reloa
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Nginx安装]]></title>
         <id>https://blog.cyanzoy.top/post/NzkqO5w9Y</id>
