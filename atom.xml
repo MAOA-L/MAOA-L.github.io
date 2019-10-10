@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-08T08:23:35.160Z</updated>
+    <updated>2019-10-10T09:46:52.409Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.cyanzoy.top"/>
     <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://blog.cyanzoy.top/images/avatar.png</logo>
     <icon>https://blog.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
+    <entry>
+        <title type="html"><![CDATA[待整理的笔记]]></title>
+        <id>https://blog.cyanzoy.top/post/AgYdbhxpK</id>
+        <link href="https://blog.cyanzoy.top/post/AgYdbhxpK">
+        </link>
+        <updated>2019-10-10T09:42:23.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="项目虚拟环境统一放在-homeenv-下">项目虚拟环境统一放在 /home/env/ 下</h1>
+<h1 id="自定义service放在-usrlibsystemdsystem-目录下">自定义service放在 /usr/lib/systemd/system/ 目录下</h1>
+<h1 id="运行脚本放在etcinitd-目录下">运行脚本放在/etc/init.d/ 目录下</h1>
+<h1 id="source-进入python的虚拟环境后直接运行deactivate退出虚拟环境">source 进入python的虚拟环境后，直接运行deactivate退出虚拟环境</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[uwsgi启动django服务]]></title>
         <id>https://blog.cyanzoy.top/post/_7T3uDhTS</id>
