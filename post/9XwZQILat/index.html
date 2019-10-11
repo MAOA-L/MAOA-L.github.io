@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://blog.cyanzoy.top/favicon.ico?v=1570701142738">
+<link rel="shortcut icon" href="https://blog.cyanzoy.top/favicon.ico?v=1570775311366">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://blog.cyanzoy.top/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://blog.cyanzoy.top">
-        <img src="https://blog.cyanzoy.top/images/avatar.png?v=1570701142738" class="site-logo">
+        <img src="https://blog.cyanzoy.top/images/avatar.png?v=1570775311366" class="site-logo">
         <h1 class="site-title">MAOA-L</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -404,6 +404,74 @@ location ~ .*admin\.php$ {
 <pre><code>if (-f $request_filename) { 
     break; 
 }
+</code></pre>
+<h1 id="记录">记录</h1>
+<pre><code class="language-nginx">http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #log_format  main  '$remote_addr - $remote_user [$time_local] &quot;$request&quot; '
+    #                  '$status $body_bytes_sent &quot;$http_referer&quot; '
+    #                  '&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;';
+
+    #access_log  logs/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    server {
+        listen       80;
+        server_name  www.cyanzoy.top;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root   /mnt/project/blog/MAOA-L.github.io/;
+	        rewrite ^/(.*) https://www.cyanzoy.top/$1 last;
+            # index  index.html index.htm;
+        }
+	    location /styles {
+            alias   /mnt/project/blog/MAOA-L.github.io/styles/;
+        }
+	
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   html;
+        }
+    }
+
+    server {
+	listen 	    443 ssl;
+	server_name www.cyanzoy.top;
+	# ssl on;
+	# root /mnt/project/blog/MAOA-L.github.io/;
+	# index index.html index.htm;
+	ssl_certificate   /usr/local/nginx/cert/2880038_www.cyanzoy.top.pem;
+	ssl_certificate_key  /usr/local/nginx/cert/2880038_www.cyanzoy.top.key;
+	ssl_session_timeout 5m;
+	# ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+	ssl_ciphers  HIGH:!aNULL:!MD5;
+	# ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+	ssl_prefer_server_ciphers on;
+	location / {
+	    root /mnt/project/blog/MAOA-L.github.io/;
+	    index index.html index.htm;
+ 	}
+    }
+
+}
+
 </code></pre>
 
             </div>
