@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-11T06:28:36.914Z</updated>
+    <updated>2019-10-11T06:33:41.691Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.cyanzoy.top"/>
     <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
@@ -620,22 +620,22 @@ location ~ .*admin\.php$ {
     }
 
     server {
-	listen 	    443 ssl;
-	server_name www.cyanzoy.top;
-	# ssl on;
-	# root /mnt/project/blog/MAOA-L.github.io/;
-	# index index.html index.htm;
-	ssl_certificate   /usr/local/nginx/cert/2880038_www.cyanzoy.top.pem;
-	ssl_certificate_key  /usr/local/nginx/cert/2880038_www.cyanzoy.top.key;
-	ssl_session_timeout 5m;
-	# ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
-	ssl_ciphers  HIGH:!aNULL:!MD5;
-	# ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-	ssl_prefer_server_ciphers on;
-	location / {
-	    root /mnt/project/blog/MAOA-L.github.io/;
-	    index index.html index.htm;
- 	}
+        listen 	    443 ssl;
+        server_name www.cyanzoy.top;
+        # ssl on;
+        # root /mnt/project/blog/MAOA-L.github.io/;
+        # index index.html index.htm;
+        ssl_certificate   /usr/local/nginx/cert/2880038_www.cyanzoy.top.pem;
+        ssl_certificate_key  /usr/local/nginx/cert/2880038_www.cyanzoy.top.key;
+        ssl_session_timeout 5m;
+        # ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+        ssl_ciphers  HIGH:!aNULL:!MD5;
+        # ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_prefer_server_ciphers on;
+        location / {
+            root /mnt/project/blog/MAOA-L.github.io/;
+            index index.html index.htm;
+        }
     }
 
 }

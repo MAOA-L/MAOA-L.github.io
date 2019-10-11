@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://blog.cyanzoy.top/favicon.ico?v=1570775311366">
+<link rel="shortcut icon" href="https://blog.cyanzoy.top/favicon.ico?v=1570775611041">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://blog.cyanzoy.top/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://blog.cyanzoy.top">
-        <img src="https://blog.cyanzoy.top/images/avatar.png?v=1570775311366" class="site-logo">
+        <img src="https://blog.cyanzoy.top/images/avatar.png?v=1570775611041" class="site-logo">
         <h1 class="site-title">MAOA-L</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -69,6 +69,10 @@
     <div class="social-container">
       
         
+          <a class="social-link" href="https://github.com/MAOA-L" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
       
         
       
@@ -83,7 +87,7 @@
       为技术而生
     </div>
     <div class="site-footer">
-       | <a class="rss" href="https://blog.cyanzoy.top/atom.xml" target="_blank">RSS</a>
+      © 2019 CyanZoy | <a class="rss" href="https://blog.cyanzoy.top/atom.xml" target="_blank">RSS</a>
     </div>
   </div>
 </div>
@@ -452,22 +456,22 @@ location ~ .*admin\.php$ {
     }
 
     server {
-	listen 	    443 ssl;
-	server_name www.cyanzoy.top;
-	# ssl on;
-	# root /mnt/project/blog/MAOA-L.github.io/;
-	# index index.html index.htm;
-	ssl_certificate   /usr/local/nginx/cert/2880038_www.cyanzoy.top.pem;
-	ssl_certificate_key  /usr/local/nginx/cert/2880038_www.cyanzoy.top.key;
-	ssl_session_timeout 5m;
-	# ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
-	ssl_ciphers  HIGH:!aNULL:!MD5;
-	# ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-	ssl_prefer_server_ciphers on;
-	location / {
-	    root /mnt/project/blog/MAOA-L.github.io/;
-	    index index.html index.htm;
- 	}
+        listen 	    443 ssl;
+        server_name www.cyanzoy.top;
+        # ssl on;
+        # root /mnt/project/blog/MAOA-L.github.io/;
+        # index index.html index.htm;
+        ssl_certificate   /usr/local/nginx/cert/2880038_www.cyanzoy.top.pem;
+        ssl_certificate_key  /usr/local/nginx/cert/2880038_www.cyanzoy.top.key;
+        ssl_session_timeout 5m;
+        # ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+        ssl_ciphers  HIGH:!aNULL:!MD5;
+        # ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_prefer_server_ciphers on;
+        location / {
+            root /mnt/project/blog/MAOA-L.github.io/;
+            index index.html index.htm;
+        }
     }
 
 }
