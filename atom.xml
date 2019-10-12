@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-11T06:33:41.691Z</updated>
+    <updated>2019-10-12T05:05:56.565Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.cyanzoy.top"/>
     <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
@@ -212,10 +212,10 @@ make &amp;&amp; make install
         <content type="html"><![CDATA[<p>一系列命令</p>
 <!-- more -->
 <h1 id="创建用户授权设更改加密模式">创建用户，授权，设更改加密模式</h1>
-<h1 id="创建账号">创建账号</h1>
+<h2 id="创建账号">创建账号</h2>
 <pre><code>CREATE USER 'username'@'host' IDENTIFIED BY 'password';
 </code></pre>
-<h1 id="授权">授权</h1>
+<h2 id="授权">授权</h2>
 <pre><code>GRANT privileges ON databasename.tablename TO 'username'@'host'
 GRANT ALL ON databasename.* TO 'username'@'host'
 说明:
@@ -227,7 +227,7 @@ GRANT ALL ON databasename.* TO 'username'@'host'
 用以上命令授权的用户不能给其它用户授权，如果想让该用户可以授权，用以下命令:
 GRANT privileges ON databasename.tablename TO 'username'@'host' WITH GRANT OPTION;
 </code></pre>
-<h1 id="设置与更改用户密码">设置与更改用户密码</h1>
+<h2 id="设置与更改用户密码">设置与更改用户密码</h2>
 <pre><code>命令:
 SET PASSWORD FOR 'username'@'host' = PASSWORD('newpassword');
 如果是当前登陆用户用:
@@ -235,7 +235,7 @@ SET PASSWORD = PASSWORD(&quot;newpassword&quot;);
 例子:
 SET PASSWORD FOR 'pig'@'%' = PASSWORD(&quot;123456&quot;);
 </code></pre>
-<h1 id="撤销用户权限">撤销用户权限</h1>
+<h2 id="撤销用户权限">撤销用户权限</h2>
 <pre><code>REVOKE privilege ON databasename.tablename FROM 'username'@'host';
 说明:
 privilege, databasename, tablename：同授权部分
@@ -245,13 +245,22 @@ REVOKE SELECT ON *.* FROM 'pig'@'%';
 同理，如果授权使用的是GRANT SELECT ON . TO 'pig'@'%';则REVOKE SELECT ON test.user FROM 'pig'@'%';命令也不能撤销该用户对test数据库中user表的Select权限。
 具体信息可以用命令SHOW GRANTS FOR 'pig'@'%'; 查看。
 </code></pre>
-<h1 id="删除用户">删除用户</h1>
+<h2 id="删除用户">删除用户</h2>
 <pre><code>DROP USER 'username'@'host';
 </code></pre>
-<h1 id="mysql8-加密方式不同如有需要可运行下面这句进行更改">mysql8 加密方式不同，如有需要可运行下面这句进行更改</h1>
+<h2 id="mysql8-加密方式不同如有需要可运行下面这句进行更改">mysql8 加密方式不同，如有需要可运行下面这句进行更改</h2>
 <pre><code>ALTER USER 'tone'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 FLUSH PRIVILEGES; 
 </code></pre>
+<h2 id="其他">其他</h2>
+<p>1.数据库目录<br>
+/var/lib/mysql/<br>
+2.配置文件<br>
+/usr/share/mysql（mysql.server命令及配置文件）mysql5.5之后的默认安装路径，mysql5.5之前的是/usr/local/mysql<br>
+3.相关命令<br>
+/usr/bin(mysqladmin mysqldump等命令)<br>
+4.启动脚本<br>
+/etc/rc.d/init.d/（启动脚本文件mysql的目录）</p>
 ]]></content>
     </entry>
     <entry>
