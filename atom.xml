@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-12T05:05:56.565Z</updated>
+    <updated>2019-10-15T01:13:27.959Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.cyanzoy.top"/>
     <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,47 @@
     <logo>https://blog.cyanzoy.top/images/avatar.png</logo>
     <icon>https://blog.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
+    <entry>
+        <title type="html"><![CDATA[linux-vim]]></title>
+        <id>https://blog.cyanzoy.top/post/XQroA40u4</id>
+        <link href="https://blog.cyanzoy.top/post/XQroA40u4">
+        </link>
+        <updated>2019-10-14T09:53:18.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="vim中的搜索">vim中的搜索</h1>
+<p>搜索方式： <code>/word</code><br>
+下一个匹配 <code>n</code> 上一个匹配 <code>N</code><br>
+第一个匹配处: <code>ggn</code><br>
+最后一处 <code>GN</code></p>
+<h2 id="自定义搜索">自定义搜索</h2>
+<ol>
+<li>通过设置 <code>hlsearch</code>来高亮搜索结果<pre><code class="language-shell">:set hlsearch
+</code></pre>
+</li>
+<li>使搜索不区分大小写<pre><code class="language-shell"> :set ignorecase
+</code></pre>
+</li>
+<li>智能大小写搜索<pre><code class="language-shell"> :set ignorecase
+ :set smartcase
+</code></pre>
+</li>
+<li>递进搜索<pre><code class="language-shell"> :set incsearch
+</code></pre>
+</li>
+<li>禁止环形搜索<pre><code class="language-shell"> :set nowrapscan
+</code></pre>
+</li>
+<li>再次开启环形搜索<pre><code class="language-shell"> :set wrapscan
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>如果你想要搜索一个文件中的一个单词，但是又不想输入它，你只需要将你的光标移到这个单词下然后按 <code>*</code>(或者 <code>shift + 8</code>)。如果你想要启动一次部分搜索(例如:同时搜索 <strong>in</strong> 和 <strong>terminal</strong>)，那你需要将光标移到到单词下，然后通过在键盘上按 <code>g*</code> (按一次 <code>g</code> 然后不断按 <code>*</code> )。<br>
+<strong>另外</strong>:如果你想要逆向搜索，按 <code>#</code> 或者 <code>g#</code> 。</li>
+<li>最后，假设你想要对文件中已经存在的单词做一点小小的修改，然后对修改后的单词执行搜索操作,一种方法是输入 <code>/</code> 与要搜索的单词。但是如果这个单词又长又复杂，那么可能需要一点时间来输入它。<br>
+一个方法是将光标移到你想要略微修改的单词下，按 <code>/</code> 之后再按 <code>Ctrl + r</code> 最后按 <code>Ctrl + w</code>。这个在光标下的单词不仅仅会被拷贝，也会被复制到 <code>/</code> 后，允许你对它进行修改并且继续进行搜索操作。</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[待整理的笔记]]></title>
         <id>https://blog.cyanzoy.top/post/AgYdbhxpK</id>
