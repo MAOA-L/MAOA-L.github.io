@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>待整理的笔记 | MAOA-L</title>
+<title>Linux性能测试 | MAOA-L</title>
 <meta name="description" content="为技术而生">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -109,26 +109,44 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">待整理的笔记</h2>
-            <div class="post-date">2019-10-10</div>
-            
-              <div class="feature-container" style="background-image: url('https://blog.cyanzoy.top/post-images/AgYdbhxpK.jpg')">
-              </div>
+            <h2 class="post-title">Linux性能测试</h2>
+            <div class="post-date">2019-10-15</div>
             
             <div class="post-content">
-              <h1 id="项目虚拟环境统一放在-homeenv-下">项目虚拟环境统一放在 /home/env/ 下</h1>
-<h1 id="自定义service放在-usrlibsystemdsystem-目录下">自定义service放在 /usr/lib/systemd/system/ 目录下</h1>
-<h1 id="运行脚本放在etcinitd-目录下">运行脚本放在/etc/init.d/ 目录下</h1>
-<h1 id="source-进入python的虚拟环境后直接运行deactivate退出虚拟环境">source 进入python的虚拟环境后，直接运行deactivate退出虚拟环境</h1>
+              <p>原文链接 https://blog.ilemonrain.com/linux/LemonBench.html</p>
+<!-- more -->
+<h1 id="一-lemonbench-简单介绍">一、LemonBench 简单介绍</h1>
+<p>LemonBench目前涵盖了如下测试：</p>
+<p>服务器基础信息 (CPU信息/内存信息/Swap信息/磁盘空间信息等)<br>
+Speedtest网速测试 (本地到最近源及国内各地域不同线路的网速)<br>
+磁盘测试 (4K块/1M块 直接写入测试)<br>
+路由追踪测试 (追踪到国内和海外不同线路的路由信息)<br>
+Spoofer测试 (获取详细网络信息，快速判断服务器接入线路)<br>
+LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可以轻松启动测试。</p>
+<h1 id="二-lemonbench-使用方法">二、LemonBench 使用方法</h1>
+<h2 id="1-快速测试">1、快速测试</h2>
+<p>如果你的服务器上安装有 <code>curl</code> 工具，请使用以下命令执行脚本：</p>
+<pre><code class="language-sh">curl -fsSL https://ilemonrain.com/download/shell/LemonBench.sh | bash -s fast
+</code></pre>
+<p>如果你的服务器上安装有 <code>wget</code> 工具，请使用以下命令执行脚本：</p>
+<pre><code class="language-sh">wget -qO- https://ilemonrain.com/download/shell/LemonBench.sh | bash -s fast
+</code></pre>
+<h2 id="2-完整测试">2、完整测试</h2>
+<p>如果你的服务器上安装有 <code>curl</code> 工具，请使用以下命令执行脚本：</p>
+<pre><code class="language-shell">curl -fsSL https://ilemonrain.com/download/shell/LemonBench.sh | bash -s full
+</code></pre>
+<p>如果你的服务器上安装有 <code>wget</code> 工具，请使用以下命令执行脚本：</p>
+<pre><code class="language-shell">wget -qO- https://ilemonrain.com/download/shell/LemonBench.sh | bash -s full
+</code></pre>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://blog.cyanzoy.top/post/_7T3uDhTS">
+                <a href="https://blog.cyanzoy.top/post/XQroA40u4">
                   <h3 class="post-title">
-                    uwsgi启动django服务
+                    linux-vim
                   </h3>
                 </a>
               </div>
