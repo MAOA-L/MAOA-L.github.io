@@ -761,7 +761,8 @@ a {
       code{
 color: #22BB9C;
 }
-p code{
+.post-detail .post-content p code{
 color: #AF732B;
 }
+
     

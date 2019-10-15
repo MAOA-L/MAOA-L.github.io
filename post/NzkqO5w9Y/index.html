@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://blog.cyanzoy.top/favicon.ico?v=1571105002077">
+<link rel="shortcut icon" href="https://blog.cyanzoy.top/favicon.ico?v=1571105464140">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://blog.cyanzoy.top/styles/main.css">
 
@@ -39,7 +39,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://blog.cyanzoy.top">
-        <img src="https://blog.cyanzoy.top/images/avatar.png?v=1571105002077" class="site-logo">
+        <img src="https://blog.cyanzoy.top/images/avatar.png?v=1571105464140" class="site-logo">
         <h1 class="site-title">MAOA-L</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -125,6 +125,15 @@ yum install openssl openssl-devel
 <h1 id="编译-安装">编译 &amp;&amp; 安装</h1>
 <pre><code>./configure --prefix=/usr/local/nginx --with-http_ssl_module
 make &amp;&amp; make install
+</code></pre>
+<h1 id="启动">启动</h1>
+<pre><code class="language-sh">nginx
+</code></pre>
+<h1 id="重启">重启</h1>
+<pre><code class="language-sh">nginx -s reload
+</code></pre>
+<h1 id="指定配置文件的启动">指定配置文件的启动</h1>
+<pre><code class="language-sh">nginx -c /usr/local/nginx/conf/nginx.conf
 </code></pre>
 
             </div>
