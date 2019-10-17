@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://blog.cyanzoy.top</id>
+    <id>https://www.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-15T06:34:43.871Z</updated>
+    <updated>2019-10-17T09:51:37.657Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://blog.cyanzoy.top"/>
-    <link rel="self" href="https://blog.cyanzoy.top/atom.xml"/>
+    <link rel="alternate" href="https://www.cyanzoy.top"/>
+    <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
     <subtitle>为技术而生</subtitle>
-    <logo>https://blog.cyanzoy.top/images/avatar.png</logo>
-    <icon>https://blog.cyanzoy.top/favicon.ico</icon>
+    <logo>https://www.cyanzoy.top/images/avatar.png</logo>
+    <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
     <entry>
         <title type="html"><![CDATA[Linux性能测试]]></title>
-        <id>https://blog.cyanzoy.top/post/YQMzxqNFJ</id>
-        <link href="https://blog.cyanzoy.top/post/YQMzxqNFJ">
+        <id>https://www.cyanzoy.top/post/YQMzxqNFJ</id>
+        <link href="https://www.cyanzoy.top/post/YQMzxqNFJ">
         </link>
         <updated>2019-10-15T06:32:01.000Z</updated>
         <summary type="html"><![CDATA[<p>原文链接 https://blog.ilemonrain.com/linux/LemonBench.html</p>
@@ -47,8 +47,8 @@ LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可�
     </entry>
     <entry>
         <title type="html"><![CDATA[linux-vim]]></title>
-        <id>https://blog.cyanzoy.top/post/XQroA40u4</id>
-        <link href="https://blog.cyanzoy.top/post/XQroA40u4">
+        <id>https://www.cyanzoy.top/post/XQroA40u4</id>
+        <link href="https://www.cyanzoy.top/post/XQroA40u4">
         </link>
         <updated>2019-10-14T09:53:18.000Z</updated>
         <content type="html"><![CDATA[<h1 id="vim中的搜索">vim中的搜索</h1>
@@ -88,8 +88,8 @@ LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可�
     </entry>
     <entry>
         <title type="html"><![CDATA[待整理的笔记]]></title>
-        <id>https://blog.cyanzoy.top/post/AgYdbhxpK</id>
-        <link href="https://blog.cyanzoy.top/post/AgYdbhxpK">
+        <id>https://www.cyanzoy.top/post/AgYdbhxpK</id>
+        <link href="https://www.cyanzoy.top/post/AgYdbhxpK">
         </link>
         <updated>2019-10-10T09:42:23.000Z</updated>
         <content type="html"><![CDATA[<h1 id="项目虚拟环境统一放在-homeenv-下">项目虚拟环境统一放在 /home/env/ 下</h1>
@@ -100,8 +100,8 @@ LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可�
     </entry>
     <entry>
         <title type="html"><![CDATA[uwsgi启动django服务]]></title>
-        <id>https://blog.cyanzoy.top/post/_7T3uDhTS</id>
-        <link href="https://blog.cyanzoy.top/post/_7T3uDhTS">
+        <id>https://www.cyanzoy.top/post/_7T3uDhTS</id>
+        <link href="https://www.cyanzoy.top/post/_7T3uDhTS">
         </link>
         <updated>2019-10-08T07:25:14.000Z</updated>
         <summary type="html"><![CDATA[<p>脚本列表<br>
@@ -259,8 +259,8 @@ ExecReload=/etc/rc.d/init.d/uwsgi9500_meetbuy reloa
     </entry>
     <entry>
         <title type="html"><![CDATA[Nginx安装]]></title>
-        <id>https://blog.cyanzoy.top/post/NzkqO5w9Y</id>
-        <link href="https://blog.cyanzoy.top/post/NzkqO5w9Y">
+        <id>https://www.cyanzoy.top/post/NzkqO5w9Y</id>
+        <link href="https://www.cyanzoy.top/post/NzkqO5w9Y">
         </link>
         <updated>2019-09-27T09:02:15.000Z</updated>
         <summary type="html"><![CDATA[<p>简介记录nginx的安装</p>
@@ -288,8 +288,8 @@ make &amp;&amp; make install
     </entry>
     <entry>
         <title type="html"><![CDATA[数据库]]></title>
-        <id>https://blog.cyanzoy.top/post/LfyAN6ymf</id>
-        <link href="https://blog.cyanzoy.top/post/LfyAN6ymf">
+        <id>https://www.cyanzoy.top/post/LfyAN6ymf</id>
+        <link href="https://www.cyanzoy.top/post/LfyAN6ymf">
         </link>
         <updated>2019-09-23T07:59:06.000Z</updated>
         <summary type="html"><![CDATA[<p>一系列命令</p>
@@ -350,8 +350,8 @@ FLUSH PRIVILEGES;
     </entry>
     <entry>
         <title type="html"><![CDATA[后端必备 Nginx 配置]]></title>
-        <id>https://blog.cyanzoy.top/post/9XwZQILat</id>
-        <link href="https://blog.cyanzoy.top/post/9XwZQILat">
+        <id>https://www.cyanzoy.top/post/9XwZQILat</id>
+        <link href="https://www.cyanzoy.top/post/9XwZQILat">
         </link>
         <updated>2019-09-19T02:55:54.000Z</updated>
         <summary type="html"><![CDATA[<ul>
@@ -739,8 +739,8 @@ location ~ .*admin\.php$ {
     </entry>
     <entry>
         <title type="html"><![CDATA[扣减库存]]></title>
-        <id>https://blog.cyanzoy.top/post/UL3LlJVMC</id>
-        <link href="https://blog.cyanzoy.top/post/UL3LlJVMC">
+        <id>https://www.cyanzoy.top/post/UL3LlJVMC</id>
+        <link href="https://www.cyanzoy.top/post/UL3LlJVMC">
         </link>
         <updated>2019-09-18T03:24:31.000Z</updated>
         <content type="html"><![CDATA[<!-- more -->
@@ -765,8 +765,8 @@ location ~ .*admin\.php$ {
     </entry>
     <entry>
         <title type="html"><![CDATA[Git 笔记]]></title>
-        <id>https://blog.cyanzoy.top/post/git-bi-ji</id>
-        <link href="https://blog.cyanzoy.top/post/git-bi-ji">
+        <id>https://www.cyanzoy.top/post/git-bi-ji</id>
+        <link href="https://www.cyanzoy.top/post/git-bi-ji">
         </link>
         <updated>2019-09-17T14:29:28.000Z</updated>
         <summary type="html"><![CDATA[<p>git的一些命令记录</p>
