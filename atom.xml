@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-17T09:51:37.657Z</updated>
+    <updated>2019-10-18T02:21:41.119Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -96,6 +96,12 @@ LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可�
 <h1 id="自定义service放在-usrlibsystemdsystem-目录下">自定义service放在 /usr/lib/systemd/system/ 目录下</h1>
 <h1 id="运行脚本放在etcinitd-目录下">运行脚本放在/etc/init.d/ 目录下</h1>
 <h1 id="source-进入python的虚拟环境后直接运行deactivate退出虚拟环境">source 进入python的虚拟环境后，直接运行deactivate退出虚拟环境</h1>
+<pre><code class="language-sql">fjarg3z30xtjcewyonjkkh6g7qub4tdei0dhu4bog 密钥
+解密
+SELECT AES_DECRYPT(UNHEX('已加密内容'), 'fjarg3z30xtjcewyonjkkh6g7qub4tdei0dhu4bog')
+加密
+SELECT  HEX(AES_ENCRYPT('待加密内容', 'fjarg3z30xtjcewyonjkkh6g7qub4tdei0dhu4bog'))
+</code></pre>
 ]]></content>
     </entry>
     <entry>
@@ -336,6 +342,13 @@ REVOKE SELECT ON *.* FROM 'pig'@'%';
 <h2 id="mysql8-加密方式不同如有需要可运行下面这句进行更改">mysql8 加密方式不同，如有需要可运行下面这句进行更改</h2>
 <pre><code>ALTER USER 'tone'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 FLUSH PRIVILEGES; 
+</code></pre>
+<h1 id="数据路加解密sql">数据路加解密sql</h1>
+<pre><code class="language-sql">fjarg3z30xtjcewyonjkkh6g7qub4tdei0dhu4bog 密钥
+解密
+SELECT AES_DECRYPT(UNHEX('已加密内容'), 'fjarg3z30xtjcewyonjkkh6g7qub4tdei0dhu4bog')
+加密
+SELECT  HEX(AES_ENCRYPT('待加密内容', 'fjarg3z30xtjcewyonjkkh6g7qub4tdei0dhu4bog'))
 </code></pre>
 <h2 id="其他">其他</h2>
 <p>1.数据库目录<br>
