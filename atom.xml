@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-24T06:35:18.255Z</updated>
+    <updated>2019-10-24T07:18:35.859Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,25 +10,6 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
-    <entry>
-        <title type="html"><![CDATA[备忘录]]></title>
-        <id>https://www.cyanzoy.top/post/fnyLymsmv</id>
-        <link href="https://www.cyanzoy.top/post/fnyLymsmv">
-        </link>
-        <updated>2019-10-24T06:29:53.000Z</updated>
-        <summary type="html"><![CDATA[<p>预防老年痴呆,人人有责</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>预防老年痴呆,人人有责</p>
-<!-- more -->
-<h1 id="关于服务器项目的一些备忘">关于服务器项目的一些备忘</h1>
-<p>项目虚拟环境统一放在 /home/env/ 下<br>
-自定义service放在 /usr/lib/systemd/system/ 目录下<br>
-运行脚本放在/etc/init.d/ 目录下</p>
-<h1 id="关于项目环境的一些备忘">关于项目环境的一些备忘</h1>
-<p>source 进入python的虚拟环境后，直接运行deactivate退出虚拟环境<br>
-linux安装mysqlclient需要环境mysql-devel</p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Linux性能测试]]></title>
         <id>https://www.cyanzoy.top/post/YQMzxqNFJ</id>
