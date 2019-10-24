@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-23T10:06:12.753Z</updated>
+    <updated>2019-10-24T06:35:18.255Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
+    <entry>
+        <title type="html"><![CDATA[备忘录]]></title>
+        <id>https://www.cyanzoy.top/post/fnyLymsmv</id>
+        <link href="https://www.cyanzoy.top/post/fnyLymsmv">
+        </link>
+        <updated>2019-10-24T06:29:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>预防老年痴呆,人人有责</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>预防老年痴呆,人人有责</p>
+<!-- more -->
+<h1 id="关于服务器项目的一些备忘">关于服务器项目的一些备忘</h1>
+<p>项目虚拟环境统一放在 /home/env/ 下<br>
+自定义service放在 /usr/lib/systemd/system/ 目录下<br>
+运行脚本放在/etc/init.d/ 目录下</p>
+<h1 id="关于项目环境的一些备忘">关于项目环境的一些备忘</h1>
+<p>source 进入python的虚拟环境后，直接运行deactivate退出虚拟环境<br>
+linux安装mysqlclient需要环境mysql-devel</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linux性能测试]]></title>
         <id>https://www.cyanzoy.top/post/YQMzxqNFJ</id>
@@ -84,19 +103,6 @@ LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可�
 <li>最后，假设你想要对文件中已经存在的单词做一点小小的修改，然后对修改后的单词执行搜索操作,一种方法是输入 <code>/</code> 与要搜索的单词。但是如果这个单词又长又复杂，那么可能需要一点时间来输入它。<br>
 一个方法是将光标移到你想要略微修改的单词下，按 <code>/</code> 之后再按 <code>Ctrl + r</code> 最后按 <code>Ctrl + w</code>。这个在光标下的单词不仅仅会被拷贝，也会被复制到 <code>/</code> 后，允许你对它进行修改并且继续进行搜索操作。</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[待整理的笔记]]></title>
-        <id>https://www.cyanzoy.top/post/AgYdbhxpK</id>
-        <link href="https://www.cyanzoy.top/post/AgYdbhxpK">
-        </link>
-        <updated>2019-10-10T09:42:23.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="项目虚拟环境统一放在-homeenv-下">项目虚拟环境统一放在 /home/env/ 下</h1>
-<h1 id="自定义service放在-usrlibsystemdsystem-目录下">自定义service放在 /usr/lib/systemd/system/ 目录下</h1>
-<h1 id="运行脚本放在etcinitd-目录下">运行脚本放在/etc/init.d/ 目录下</h1>
-<h1 id="source-进入python的虚拟环境后直接运行deactivate退出虚拟环境">source 进入python的虚拟环境后，直接运行deactivate退出虚拟环境</h1>
-<h1 id="linux安装mysql需要环境mysql-devel">linux安装mysql需要环境mysql-devel</h1>
 ]]></content>
     </entry>
     <entry>
@@ -706,10 +712,18 @@ location ~ .*admin\.php$ {
             root   /mnt/project/blog/MAOA-L.github.io/;
 	        rewrite ^/(.*) https://www.cyanzoy.top/$1 last;
             # index  index.html index.htm;
-        }
+        }        
 	    location /styles {
             alias   /mnt/project/blog/MAOA-L.github.io/styles/;
         }
+        # 如果是做代理(django-uwsgi服务)
+        location / {
+            #root   /usr/share/nginx/aichensmart;
+            #index  index.php index.html index.htm;
+            include /etc/nginx/uwsgi_params;
+            uwsgi_pass 127.0.0.1:port;
+        }
+
 	
         #error_page  404              /404.html;
 
