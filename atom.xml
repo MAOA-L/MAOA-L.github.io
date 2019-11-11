@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>MAOA-L</title>
-    <updated>2019-10-24T07:18:35.859Z</updated>
+    <updated>2019-11-11T01:23:03.811Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,35 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, MAOA-L</rights>
+    <entry>
+        <title type="html"><![CDATA[Python的re模块中match、search、findall、finditer的区别]]></title>
+        <id>https://www.cyanzoy.top/post/qMULWET8f</id>
+        <link href="https://www.cyanzoy.top/post/qMULWET8f">
+        </link>
+        <updated>2019-11-11T01:18:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>温习python中的re模块</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>温习python中的re模块</p>
+<!-- more -->
+<h2 id="match">match</h2>
+<p>匹配<code>string</code> <strong>开头</strong>,成功返回<code>Match object</code>, 失败返回None,只匹配一个。</p>
+<h2 id="search">search</h2>
+<p>在<code>string</code>中进行搜索,成功返回<code>Match object</code>, 失败返回None, 只匹配一个。</p>
+<h2 id="findall">findall</h2>
+<p>在<code>string</code>中查找所有匹配成功的组, 即用括号括起来的部分。返回list对象，每个<code>list item</code>是由每个匹配的所有组组成的list。</p>
+<h2 id="finditer">finditer</h2>
+<p>在<code>string</code>中查找所有匹配成功的字符串, 返回iterator,每个item是一个Match object。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IRR]]></title>
+        <id>https://www.cyanzoy.top/post/PZwpK-fkr</id>
+        <link href="https://www.cyanzoy.top/post/PZwpK-fkr">
+        </link>
+        <updated>2019-10-25T01:33:05.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linux性能测试]]></title>
         <id>https://www.cyanzoy.top/post/YQMzxqNFJ</id>
