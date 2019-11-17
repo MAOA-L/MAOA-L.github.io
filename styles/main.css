@@ -327,7 +327,6 @@ a {
   background-position: center;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 }
 .sidebar .menu-btn {
   display: none;
