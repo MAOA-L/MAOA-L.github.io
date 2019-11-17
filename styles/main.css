@@ -764,34 +764,18 @@ color: #22BB9C;
 .post-detail .post-content p code{
 color: #AF732B;
 }
-.box {
-            float: left;
-            width: 150px;
-            height: 250px;
-            margin: 0 40px 40px 0;
-            border: 1px solid #eee;
-        }
-        
- .box6,
-        .box7,
-        .box8,
-        .box9,
-        .box10 {
-            overflow-y: scroll;
-        }
-        
-        .box6::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        .box6::-webkit-scrollbar-track {
-            border-radius: 5px;
-            background-color: #eee;
-        }
-        
-        .box6::-webkit-scrollbar-thumb {
-            border-radius: 5px;
-            background: #3DB6A4;
-        }
+/*控制整个滚动条*/
+::-webkit-scrollbar {
+    background-color: lightgray;
+    width: 10px;
+    height: 10px;
+    background-clip: padding-box;
+}
+
+/*滚动条中间滑动部分*/
+::-webkit-scrollbar-thumb {
+    background-color: #6194A7;
+    border-radius: 5px;
+}
 
     
