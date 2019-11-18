@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" >
 
-<title>uwsgi启动django服务 | Sigma</title>
+<title>uwsgi启动django服务+虚拟环境 | Sigma</title>
 <meta name="description" content="为技术而生">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1573992597643">
+<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1574060592770">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://www.cyanzoy.top/styles/main.css">
 
@@ -39,7 +39,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://www.cyanzoy.top">
-        <img src="https://www.cyanzoy.top/images/avatar.png?v=1573992597643" class="site-logo">
+        <img src="https://www.cyanzoy.top/images/avatar.png?v=1574060592770" class="site-logo">
         <h1 class="site-title">Sigma</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -121,7 +121,7 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">uwsgi启动django服务</h2>
+            <h2 class="post-title">uwsgi启动django服务+虚拟环境</h2>
             <div class="post-date">2019-10-08</div>
             
               <div class="feature-container" style="background-image: url('https://www.cyanzoy.top/post-images/_7T3uDhTS.jpg')">
@@ -137,9 +137,9 @@
 #端口
 socket = 127.0.0.1:8000
 # django项目绝对路径
-chdir = /home/centos/project/diary
+chdir = /mnt/project/Blog/
 # 模块路径（项目名称.wsgi）可以理解为wsgi.py的位置
-module = diary.wsgi
+module = Blog.wsgi
 # 允许主进程
 master = true
 #最多进程数
@@ -147,10 +147,17 @@ processes  = 4
 # 退出时候回收pid文件
 vacuum = true
 #日志大小配置500M
-log-maxsize = 500000000 
+log-maxsize = 50000000
 #记录日志配置
-logto = /home/centos/project/logs/uwsgi8000.log
-pidfile = /home/centos/project/logs/uwsgi8000.pid
+logto = /mnt/project/logs/Blog8000.log
+pidfile = /mnt/project/logs/Blog8000.pid
+daemonize = /mnt/project/logs/Blog/Blog.log
+wsgi-file = /mnt/project/Blog/Blog/wsgi.py
+virtualenv = /home/env/Blog_env
+enable-threads = true
+workers = 2
+reload-mercy = 10
+max-requests = 1000
 
 #[uwsgi]
 #socket = :8000
@@ -272,9 +279,24 @@ IgnoreSIGPIPE=no
 KillMode=process
 GuessMainPID=no
 RemainAfterExit=yes
-ExecStart=/etc/rc.d/init.d/uwsgi9500_meetbuy start
-ExecStop=/etc/rc.d/init.d/uwsgi9500_meetbuy stop
-ExecReload=/etc/rc.d/init.d/uwsgi9500_meetbuy reloa
+ExecStart=/etc/init.d/uwsgi9500_meetbuy start
+ExecStop=/etc/init.d/uwsgi9500_meetbuy stop
+ExecReload=/etc/init.d/uwsgi9500_meetbuy reload
+</code></pre>
+<h1 id="nginx中的配置">Nginx中的配置</h1>
+<pre><code class="language-nginx">    server {
+        listen       80;
+        server_name  bus.cyanzoy.top;
+
+        location / {
+           include /usr/local/nginx/conf/uwsgi_params;
+           uwsgi_pass 127.0.0.1:8000;
+
+        }
+        location /static {
+            alias   /mnt/project/Blog/static/;
+        }
+    }
 </code></pre>
 
             </div>

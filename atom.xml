@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2019-11-17T12:10:03.800Z</updated>
+    <updated>2019-11-18T07:03:23.815Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -168,7 +168,7 @@ LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可�
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[uwsgi启动django服务]]></title>
+        <title type="html"><![CDATA[uwsgi启动django服务+虚拟环境]]></title>
         <id>https://www.cyanzoy.top/post/_7T3uDhTS</id>
         <link href="https://www.cyanzoy.top/post/_7T3uDhTS">
         </link>
@@ -185,9 +185,9 @@ LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可�
 #端口
 socket = 127.0.0.1:8000
 # django项目绝对路径
-chdir = /home/centos/project/diary
+chdir = /mnt/project/Blog/
 # 模块路径（项目名称.wsgi）可以理解为wsgi.py的位置
-module = diary.wsgi
+module = Blog.wsgi
 # 允许主进程
 master = true
 #最多进程数
@@ -195,10 +195,17 @@ processes  = 4
 # 退出时候回收pid文件
 vacuum = true
 #日志大小配置500M
-log-maxsize = 500000000 
+log-maxsize = 50000000
 #记录日志配置
-logto = /home/centos/project/logs/uwsgi8000.log
-pidfile = /home/centos/project/logs/uwsgi8000.pid
+logto = /mnt/project/logs/Blog8000.log
+pidfile = /mnt/project/logs/Blog8000.pid
+daemonize = /mnt/project/logs/Blog/Blog.log
+wsgi-file = /mnt/project/Blog/Blog/wsgi.py
+virtualenv = /home/env/Blog_env
+enable-threads = true
+workers = 2
+reload-mercy = 10
+max-requests = 1000
 
 #[uwsgi]
 #socket = :8000
@@ -320,9 +327,24 @@ IgnoreSIGPIPE=no
 KillMode=process
 GuessMainPID=no
 RemainAfterExit=yes
-ExecStart=/etc/rc.d/init.d/uwsgi9500_meetbuy start
-ExecStop=/etc/rc.d/init.d/uwsgi9500_meetbuy stop
-ExecReload=/etc/rc.d/init.d/uwsgi9500_meetbuy reloa
+ExecStart=/etc/init.d/uwsgi9500_meetbuy start
+ExecStop=/etc/init.d/uwsgi9500_meetbuy stop
+ExecReload=/etc/init.d/uwsgi9500_meetbuy reload
+</code></pre>
+<h1 id="nginx中的配置">Nginx中的配置</h1>
+<pre><code class="language-nginx">    server {
+        listen       80;
+        server_name  bus.cyanzoy.top;
+
+        location / {
+           include /usr/local/nginx/conf/uwsgi_params;
+           uwsgi_pass 127.0.0.1:8000;
+
+        }
+        location /static {
+            alias   /mnt/project/Blog/static/;
+        }
+    }
 </code></pre>
 ]]></content>
     </entry>
