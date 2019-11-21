@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2019-11-19T10:26:49.582Z</updated>
+    <updated>2019-11-21T07:53:28.974Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,53 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, Sigma</rights>
+    <entry>
+        <title type="html"><![CDATA[Python 异步编程asyncio模块]]></title>
+        <id>https://www.cyanzoy.top/post/LfH2aK5oT</id>
+        <link href="https://www.cyanzoy.top/post/LfH2aK5oT">
+        </link>
+        <updated>2019-11-21T07:44:10.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>asyncio 模块最大特点就是，只存在一个线程，跟 JavaScript 一样。<br>
+由于只有一个线程，就不可能多个任务同时运行。asyncio 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 JavaScript 也是一样的。</p>
+</blockquote>
+<blockquote>
+<p>由于代码的执行权在多个任务之间交换，所以看上去好像多个任务同时运行，其实底层只有一个线程，多个任务分享运行时间。</p>
+</blockquote>
+<blockquote>
+<p>表面上，这是一个不合理的设计，明明有多线程多进程的能力，为什么放着多余的 CPU 核心不用，而只用一个线程呢？但是就像前面说的，单线程简化了很多问题，使得代码逻辑变得简单，写法符合直觉。<br>
+asyncio 模块在单线程上启动一个事件循环(event loop)，时刻监听新进入循环的事件，加以处理，并不断重复这个过程，直到异步任务结束。事件循环的内部机制，可以参考 JavaScript 的模型，两者是一样的。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>asyncio 模块最大特点就是，只存在一个线程，跟 JavaScript 一样。<br>
+由于只有一个线程，就不可能多个任务同时运行。asyncio 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 JavaScript 也是一样的。</p>
+</blockquote>
+<blockquote>
+<p>由于代码的执行权在多个任务之间交换，所以看上去好像多个任务同时运行，其实底层只有一个线程，多个任务分享运行时间。</p>
+</blockquote>
+<blockquote>
+<p>表面上，这是一个不合理的设计，明明有多线程多进程的能力，为什么放着多余的 CPU 核心不用，而只用一个线程呢？但是就像前面说的，单线程简化了很多问题，使得代码逻辑变得简单，写法符合直觉。<br>
+asyncio 模块在单线程上启动一个事件循环(event loop)，时刻监听新进入循环的事件，加以处理，并不断重复这个过程，直到异步任务结束。事件循环的内部机制，可以参考 JavaScript 的模型，两者是一样的。</p>
+</blockquote>
+<!-- more -->
+<pre><code class="language-python">#!/usr/bin/env python3
+# async.py
+# python3.7 及以上
+import asyncio
+
+async def count():
+    print(&quot;One&quot;)
+    await asyncio.sleep(1)
+    print(&quot;Two&quot;)
+
+async def main():
+    await asyncio.gather(count(), count(), count())
+
+asyncio.run(main())
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Savitzky-Golay 滤波器]]></title>
         <id>https://www.cyanzoy.top/post/ilNuF0noL</id>
@@ -361,35 +408,6 @@ systemctl start Blog
 # 打开日志
 tail -fn 20 /mnt/project/logs/Blog/Blog.log
 
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Nginx安装]]></title>
-        <id>https://www.cyanzoy.top/post/NzkqO5w9Y</id>
-        <link href="https://www.cyanzoy.top/post/NzkqO5w9Y">
-        </link>
-        <updated>2019-09-27T09:02:15.000Z</updated>
-        <summary type="html"><![CDATA[<p>简介记录nginx的安装</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>简介记录nginx的安装</p>
-<!-- more -->
-<h1 id="需要的依赖环境">需要的依赖环境</h1>
-<pre><code>yum -y install pcre pcre-devel
-yum install openssl openssl-devel
-</code></pre>
-<h1 id="编译-安装">编译 &amp;&amp; 安装</h1>
-<pre><code>./configure --prefix=/usr/local/nginx --with-http_ssl_module
-make &amp;&amp; make install
-</code></pre>
-<h1 id="启动">启动</h1>
-<pre><code class="language-sh">nginx
-</code></pre>
-<h1 id="重启">重启</h1>
-<pre><code class="language-sh">nginx -s reload
-</code></pre>
-<h1 id="指定配置文件的启动">指定配置文件的启动</h1>
-<pre><code class="language-sh">nginx -c /usr/local/nginx/conf/nginx.conf
 </code></pre>
 ]]></content>
     </entry>
