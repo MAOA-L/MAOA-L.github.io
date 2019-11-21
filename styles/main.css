@@ -763,6 +763,9 @@ color: #22BB9C;
 .post-detail .post-content p code{
 color: #AF732B;
 }
+.post-detail .feature-container {
+    padding-top: 40% ! important;
+}
 /*控制整个滚动条*/
 ::-webkit-scrollbar {
     background-color: lightgray;

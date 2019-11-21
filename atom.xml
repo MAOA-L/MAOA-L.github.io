@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2019-11-21T07:54:56.924Z</updated>
+    <updated>2019-11-21T10:00:13.988Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -20,18 +20,12 @@
 <p><code>asyncio</code> 模块最大特点就是，只存在一个线程，跟 <code>JavaScript</code> 一样。<br>
 由于只有一个线程，就不可能多个任务同时运行。<code>asyncio</code> 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 <code>JavaScript</code> 也是一样的。</p>
 </blockquote>
-<blockquote>
-<p>由于代码的执行权在多个任务之间交换，所以看上去好像多个任务同时运行，其实底层只有一个线程，多个任务分享运行时间。</p>
-</blockquote>
-<blockquote>
-<p>表面上，这是一个不合理的设计，明明有多线程多进程的能力，为什么放着多余的 <code>CPU</code> 核心不用，而只用一个线程呢？但是就像前面说的，单线程简化了很多问题，使得代码逻辑变得简单，写法符合直觉。<br>
-<code>asyncio</code> 模块在单线程上启动一个事件循环(event loop)，时刻监听新进入循环的事件，加以处理，并不断重复这个过程，直到异步任务结束。事件循环的内部机制，可以参考 <code>JavaScript</code> 的模型，两者是一样的。</p>
-</blockquote>
 ]]></summary>
         <content type="html"><![CDATA[<blockquote>
 <p><code>asyncio</code> 模块最大特点就是，只存在一个线程，跟 <code>JavaScript</code> 一样。<br>
 由于只有一个线程，就不可能多个任务同时运行。<code>asyncio</code> 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 <code>JavaScript</code> 也是一样的。</p>
 </blockquote>
+<!-- more -->
 <blockquote>
 <p>由于代码的执行权在多个任务之间交换，所以看上去好像多个任务同时运行，其实底层只有一个线程，多个任务分享运行时间。</p>
 </blockquote>
@@ -39,7 +33,6 @@
 <p>表面上，这是一个不合理的设计，明明有多线程多进程的能力，为什么放着多余的 <code>CPU</code> 核心不用，而只用一个线程呢？但是就像前面说的，单线程简化了很多问题，使得代码逻辑变得简单，写法符合直觉。<br>
 <code>asyncio</code> 模块在单线程上启动一个事件循环(event loop)，时刻监听新进入循环的事件，加以处理，并不断重复这个过程，直到异步任务结束。事件循环的内部机制，可以参考 <code>JavaScript</code> 的模型，两者是一样的。</p>
 </blockquote>
-<!-- more -->
 <pre><code class="language-python">#!/usr/bin/env python3
 # async.py
 # python3.7 及以上
