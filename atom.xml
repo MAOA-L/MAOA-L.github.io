@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2019-11-21T10:00:13.988Z</updated>
+    <updated>2019-11-25T10:02:01.943Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, Sigma</rights>
     <entry>
-        <title type="html"><![CDATA[Python 异步编程asyncio模块]]></title>
+        <title type="html"><![CDATA[🌾Python 异步编程asyncio模块]]></title>
         <id>https://www.cyanzoy.top/post/LfH2aK5oT</id>
         <link href="https://www.cyanzoy.top/post/LfH2aK5oT">
         </link>
@@ -51,7 +51,7 @@ asyncio.run(main())
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Savitzky-Golay 滤波器]]></title>
+        <title type="html"><![CDATA[🌲Savitzky-Golay 滤波器]]></title>
         <id>https://www.cyanzoy.top/post/ilNuF0noL</id>
         <link href="https://www.cyanzoy.top/post/ilNuF0noL">
         </link>
@@ -60,7 +60,7 @@ asyncio.run(main())
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[轨迹-异常值检测(三)]]></title>
+        <title type="html"><![CDATA[🌳轨迹-异常值检测(三)]]></title>
         <id>https://www.cyanzoy.top/post/YiNcentC2</id>
         <link href="https://www.cyanzoy.top/post/YiNcentC2">
         </link>
@@ -75,7 +75,7 @@ asyncio.run(main())
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[轨迹-异常值检测(二)]]></title>
+        <title type="html"><![CDATA[🌳轨迹-异常值检测(二)]]></title>
         <id>https://www.cyanzoy.top/post/xnOx4dk3D</id>
         <link href="https://www.cyanzoy.top/post/xnOx4dk3D">
         </link>
@@ -89,7 +89,7 @@ asyncio.run(main())
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[轨迹-异常值检测(一)]]></title>
+        <title type="html"><![CDATA[🌳轨迹-异常值检测(一)]]></title>
         <id>https://www.cyanzoy.top/post/XUaCLWFv_</id>
         <link href="https://www.cyanzoy.top/post/XUaCLWFv_">
         </link>
@@ -103,7 +103,7 @@ asyncio.run(main())
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Python的re模块中match、search、findall、finditer的区别]]></title>
+        <title type="html"><![CDATA[🌱Python的re模块中match、search、findall、finditer的区别]]></title>
         <id>https://www.cyanzoy.top/post/qMULWET8f</id>
         <link href="https://www.cyanzoy.top/post/qMULWET8f">
         </link>
