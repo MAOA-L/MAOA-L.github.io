@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" >
 
-<title>linux-vim | Sigma</title>
+<title>🌷linux-命令 | Sigma</title>
 <meta name="description" content="为技术而生">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1574677044260">
+<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1574738878337">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://www.cyanzoy.top/styles/main.css">
 
@@ -39,7 +39,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://www.cyanzoy.top">
-        <img src="https://www.cyanzoy.top/images/avatar.png?v=1574677044260" class="site-logo">
+        <img src="https://www.cyanzoy.top/images/avatar.png?v=1574738878337" class="site-logo">
         <h1 class="site-title">Sigma</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -121,7 +121,7 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">linux-vim</h2>
+            <h2 class="post-title">🌷linux-命令</h2>
             <div class="post-date">2019-10-14</div>
             
               <div class="feature-container" style="background-image: url('https://www.cyanzoy.top/post-images/XQroA40u4.png')">
@@ -161,6 +161,17 @@
 <li>最后，假设你想要对文件中已经存在的单词做一点小小的修改，然后对修改后的单词执行搜索操作,一种方法是输入 <code>/</code> 与要搜索的单词。但是如果这个单词又长又复杂，那么可能需要一点时间来输入它。<br>
 一个方法是将光标移到你想要略微修改的单词下，按 <code>/</code> 之后再按 <code>Ctrl + r</code> 最后按 <code>Ctrl + w</code>。这个在光标下的单词不仅仅会被拷贝，也会被复制到 <code>/</code> 后，允许你对它进行修改并且继续进行搜索操作。</li>
 </ul>
+<h1 id="linux-查看进程">Linux - 查看进程</h1>
+<pre><code># 如果想查看某个进程的内存使用情况,使用top命令
+# 以下为查看进程名为rviz状态命令
+top -p `pidof rviz`
+</code></pre>
+<pre><code># 为监控pid对应的进程
+top -p pid
+</code></pre>
+<pre><code># 用free命令查看虚拟内存。
+free -h
+</code></pre>
 
             </div>
             
