@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>🚢docker安装ce版本 | Sigma</title>
+<meta name="description" content="为技术而生">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1575002809898">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://www.cyanzoy.top/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150083328-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150083328-1');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.cyanzoy.top">
+        <img src="https://www.cyanzoy.top/images/avatar.png?v=1575002809898" class="site-logo">
+        <h1 class="site-title">Sigma</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.cyanzoy.top/post/fnyLymsmv/" class="site-nav" target="_blank">
+            备忘录
+          </a>
+        
+      
+        
+          <a href="https://www.cyanzoy.top/post/WdPSaRYzX/" class="site-nav" target="_blank">
+            Menu
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/MAOA-L" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/chen-zhou-yun-15/activities" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      为技术而生
+    </div>
+    <div class="site-footer">
+      © 2019 CyanZoy | <a class="rss" href="https://www.cyanzoy.top/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">🚢docker安装ce版本</h2>
+            <div class="post-date">2019-11-29</div>
+            
+            <div class="post-content">
+              <p>官网 https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/centos/</p>
+<!-- more -->
+<h1 id="uninstall-old-versions">Uninstall old versions</h1>
+<blockquote>
+<p>Older versions of Docker were called docker or docker-engine. If these are installed, uninstall them, along with associated dependencies.</p>
+</blockquote>
+<pre><code>$ sudo yum remove docker \
+                  docker-common \
+                  docker-selinux \
+                  docker-engine
+</code></pre>
+<h1 id="方法一">方法一:</h1>
+<h2 id="install-using-the-repository">Install using the repository</h2>
+<p><strong>SET UP THE REPOSITORY</strong></p>
+<blockquote>
+<p>Install required packages. yum-utils provides the yum-config-manager utility, and device-mapper-persistent-data and lvm2 are required by the devicemapper storage driver.</p>
+</blockquote>
+<pre><code>$ sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+</code></pre>
+<blockquote>
+<p>Use the following command to set up the stable repository. You always need the stable repository, even if you want to install builds from the edge or test repositories as well.</p>
+</blockquote>
+<pre><code>$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre>
+<blockquote>
+<p>Optional: Enable the edge and test repositories. These repositories are included in the docker.repo file above but are disabled by default. You can enable them alongside the stable repository.</p>
+</blockquote>
+<pre><code>$ sudo yum-config-manager --enable docker-ce-edge
+$ sudo yum-config-manager --enable docker-ce-test
+</code></pre>
+<blockquote>
+<p>You can disable the edge or test repository by running the yum-config-manager command with the --disable flag. To re-enable it, use the --enable flag. The following command disables the edge repository.</p>
+</blockquote>
+<pre><code>$ sudo yum-config-manager --disable docker-ce-edge
+</code></pre>
+<blockquote>
+<p>Note: Starting with Docker 17.06, stable releases are also pushed to the edge and test repositories.</p>
+</blockquote>
+<h2 id="learn-about-stable-and-edge-builds">Learn about stable and edge builds.</h2>
+<p><strong>INSTALL DOCKER CE</strong></p>
+<ol>
+<li>Install the latest version of Docker CE, or go to the next step to install a specific version.</li>
+</ol>
+<pre><code>$ sudo yum install docker-ce
+</code></pre>
+<ol start="2">
+<li>On production systems, you should install a specific version of Docker CE instead of always using the latest. List the available versions. This example uses the sort -r command to sort the results by version number, highest to lowest, and is truncated.</li>
+</ol>
+<pre><code>$ yum list docker-ce --showduplicates | sort -r
+
+docker-ce.x86_64            17.09.ce-1.el7.centos             docker-ce-stable
+</code></pre>
+<pre><code>$ sudo yum install &lt;FULLY-QUALIFIED-PACKAGE-NAME&gt;
+</code></pre>
+<ol start="3">
+<li>Start Docker.</li>
+</ol>
+<pre><code>$ sudo systemctl start docker
+</code></pre>
+<blockquote>
+<p>Verify that docker is installed correctly by running the hello-world image.</p>
+</blockquote>
+<pre><code>$ sudo docker run hello-world
+</code></pre>
+<h1 id="方法二">方法二:</h1>
+<h2 id="install-from-a-package">Install from a package</h2>
+<blockquote>
+<p>Go to <a href="https://download.docker.com/linux/centos/7/x86_64/stable/Packages/">https://download.docker.com/linux/centos/7/x86_64/stable/Packages/</a> and download the .rpm file for the Docker version you want to install.</p>
+</blockquote>
+<blockquote>
+<p>Note: To install an edge package, change the word stable in the above URL to edge. Learn about stable and edge channels.</p>
+</blockquote>
+<blockquote>
+<p>Install Docker CE, changing the path below to the path where you downloaded the Docker package.</p>
+</blockquote>
+<pre><code>$ sudo yum install /path/to/package.rpm
+</code></pre>
+<blockquote>
+<p>Docker is installed but not started. The docker group is created, but no users are added to the group.</p>
+</blockquote>
+<p><code>Start Docker.</code></p>
+<pre><code>$ sudo systemctl start docker
+</code></pre>
+<blockquote>
+<p>Verify that docker is installed correctly by running the hello-world image.</p>
+</blockquote>
+<pre><code>$ sudo docker run hello-world
+</code></pre>
+<blockquote>
+<p>This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.</p>
+</blockquote>
+<h1 id="upgrade-docker-ce">UPGRADE DOCKER CE</h1>
+<blockquote>
+<p>To upgrade Docker CE, download the newer package file and repeat the installation procedure, using <code>yum -y upgrade</code> instead of <code>yum -y install</code>, and pointing to the new file.</p>
+</blockquote>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.cyanzoy.top/post/LfH2aK5oT">
+                  <h3 class="post-title">
+                    🌾Python 异步编程asyncio模块
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

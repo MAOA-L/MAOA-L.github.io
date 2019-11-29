@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2019-11-26T03:28:01.826Z</updated>
+    <updated>2019-11-29T04:46:52.191Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,115 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2019, Sigma</rights>
+    <entry>
+        <title type="html"><![CDATA[🚢docker安装ce版本]]></title>
+        <id>https://www.cyanzoy.top/post/46g2ELhQs</id>
+        <link href="https://www.cyanzoy.top/post/46g2ELhQs">
+        </link>
+        <updated>2019-11-29T03:45:12.000Z</updated>
+        <summary type="html"><![CDATA[<p>官网 https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/centos/</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>官网 https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/centos/</p>
+<!-- more -->
+<h1 id="uninstall-old-versions">Uninstall old versions</h1>
+<blockquote>
+<p>Older versions of Docker were called docker or docker-engine. If these are installed, uninstall them, along with associated dependencies.</p>
+</blockquote>
+<pre><code>$ sudo yum remove docker \
+                  docker-common \
+                  docker-selinux \
+                  docker-engine
+</code></pre>
+<h1 id="方法一">方法一:</h1>
+<h2 id="install-using-the-repository">Install using the repository</h2>
+<p><strong>SET UP THE REPOSITORY</strong></p>
+<blockquote>
+<p>Install required packages. yum-utils provides the yum-config-manager utility, and device-mapper-persistent-data and lvm2 are required by the devicemapper storage driver.</p>
+</blockquote>
+<pre><code>$ sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+</code></pre>
+<blockquote>
+<p>Use the following command to set up the stable repository. You always need the stable repository, even if you want to install builds from the edge or test repositories as well.</p>
+</blockquote>
+<pre><code>$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre>
+<blockquote>
+<p>Optional: Enable the edge and test repositories. These repositories are included in the docker.repo file above but are disabled by default. You can enable them alongside the stable repository.</p>
+</blockquote>
+<pre><code>$ sudo yum-config-manager --enable docker-ce-edge
+$ sudo yum-config-manager --enable docker-ce-test
+</code></pre>
+<blockquote>
+<p>You can disable the edge or test repository by running the yum-config-manager command with the --disable flag. To re-enable it, use the --enable flag. The following command disables the edge repository.</p>
+</blockquote>
+<pre><code>$ sudo yum-config-manager --disable docker-ce-edge
+</code></pre>
+<blockquote>
+<p>Note: Starting with Docker 17.06, stable releases are also pushed to the edge and test repositories.</p>
+</blockquote>
+<h2 id="learn-about-stable-and-edge-builds">Learn about stable and edge builds.</h2>
+<p><strong>INSTALL DOCKER CE</strong></p>
+<ol>
+<li>Install the latest version of Docker CE, or go to the next step to install a specific version.</li>
+</ol>
+<pre><code>$ sudo yum install docker-ce
+</code></pre>
+<ol start="2">
+<li>On production systems, you should install a specific version of Docker CE instead of always using the latest. List the available versions. This example uses the sort -r command to sort the results by version number, highest to lowest, and is truncated.</li>
+</ol>
+<pre><code>$ yum list docker-ce --showduplicates | sort -r
+
+docker-ce.x86_64            17.09.ce-1.el7.centos             docker-ce-stable
+</code></pre>
+<pre><code>$ sudo yum install &lt;FULLY-QUALIFIED-PACKAGE-NAME&gt;
+</code></pre>
+<ol start="3">
+<li>Start Docker.</li>
+</ol>
+<pre><code>$ sudo systemctl start docker
+</code></pre>
+<blockquote>
+<p>Verify that docker is installed correctly by running the hello-world image.</p>
+</blockquote>
+<pre><code>$ sudo docker run hello-world
+</code></pre>
+<h1 id="方法二">方法二:</h1>
+<h2 id="install-from-a-package">Install from a package</h2>
+<blockquote>
+<p>Go to <a href="https://download.docker.com/linux/centos/7/x86_64/stable/Packages/">https://download.docker.com/linux/centos/7/x86_64/stable/Packages/</a> and download the .rpm file for the Docker version you want to install.</p>
+</blockquote>
+<blockquote>
+<p>Note: To install an edge package, change the word stable in the above URL to edge. Learn about stable and edge channels.</p>
+</blockquote>
+<blockquote>
+<p>Install Docker CE, changing the path below to the path where you downloaded the Docker package.</p>
+</blockquote>
+<pre><code>$ sudo yum install /path/to/package.rpm
+</code></pre>
+<blockquote>
+<p>Docker is installed but not started. The docker group is created, but no users are added to the group.</p>
+</blockquote>
+<p><code>Start Docker.</code></p>
+<pre><code>$ sudo systemctl start docker
+</code></pre>
+<blockquote>
+<p>Verify that docker is installed correctly by running the hello-world image.</p>
+</blockquote>
+<pre><code>$ sudo docker run hello-world
+</code></pre>
+<blockquote>
+<p>This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.</p>
+</blockquote>
+<h1 id="upgrade-docker-ce">UPGRADE DOCKER CE</h1>
+<blockquote>
+<p>To upgrade Docker CE, download the newer package file and repeat the installation procedure, using <code>yum -y upgrade</code> instead of <code>yum -y install</code>, and pointing to the new file.</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[🌾Python 异步编程asyncio模块]]></title>
         <id>https://www.cyanzoy.top/post/LfH2aK5oT</id>
@@ -215,203 +324,6 @@ top -p pid
 </code></pre>
 <pre><code># 用free命令查看虚拟内存。
 free -h
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[uwsgi启动django服务+虚拟环境]]></title>
-        <id>https://www.cyanzoy.top/post/_7T3uDhTS</id>
-        <link href="https://www.cyanzoy.top/post/_7T3uDhTS">
-        </link>
-        <updated>2019-10-08T07:25:14.000Z</updated>
-        <summary type="html"><![CDATA[<p>脚本列表<br>
-启动django服务用的Uwsgi的ini启动配置文件,启动脚本,自定义service脚本</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>脚本列表<br>
-启动django服务用的Uwsgi的ini启动配置文件,启动脚本,自定义service脚本</p>
-<!-- more -->
-<h1 id="uwsgiini">uwsgi.ini</h1>
-<pre><code class="language-ini"># uwsgi 配置文件
-[uwsgi]
-#端口
-socket = 127.0.0.1:8000
-# django项目绝对路径
-chdir = /mnt/project/Blog/
-# 模块路径（项目名称.wsgi）可以理解为wsgi.py的位置
-module = Blog.wsgi
-# 允许主进程
-master = true
-#最多进程数
-processes  = 4
-# 退出时候回收pid文件
-vacuum = true
-#日志大小配置500M
-log-maxsize = 50000000
-#记录日志配置
-logto = /mnt/project/logs/Blog8000.log
-pidfile = /mnt/project/logs/Blog8000.pid
-daemonize = /mnt/project/logs/Blog/Blog.log
-wsgi-file = /mnt/project/Blog/Blog/wsgi.py
-virtualenv = /home/env/Blog_env
-enable-threads = true
-workers = 2
-reload-mercy = 10
-max-requests = 1000
-
-#[uwsgi]
-#socket = :8000
-#master = true
-#vhost = true
-#gid = nginx
-#uid = nginx
-#no-stie = true
-#enable-threads = true
-#workers = 2
-#reload-mercy = 10
-#vacuum = true
-#max-requests = 1000
-#limit-as = 512
-#buffer-sizi = 30000
-#pidfile = /var/run/uwsgi8000diary.pid
-#daemonize = /home/centos/project/logs/diary/uwsgi.log
-#wsgi-file = /home/centos/project/diary/diary/wsgi.py
-#chdir = /home/centos/project/diary
-#module=diary.wsgi:application
-#virtualenv = /usr/local/python3.7
-#vacuum = True
-</code></pre>
-<h1 id="启动脚本-etcinitd">启动脚本 /etc/init.d/</h1>
-<pre><code class="language-bash">#! /bin/sh
-# chkconfig: 2345 55 25
-# Description: Startup script for uwsgi webserver on Debian. Place in /etc/init.d and
-# run 'update-rc.d -f uwsgi defaults', or use the appropriate command on your
-# distro. For CentOS/Redhat run: 'chkconfig --add uwsgi'
-
-### BEGIN INIT INFO
-# Provides:          uwsgi
-# Required-Start:    $all
-# Required-Stop:     $all
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: starts the uwsgi web server
-# Description:       starts uwsgi using start-stop-daemon
-### END INIT INFO
-
-# Author:   licess
-# website:  http://lnmp.org
-
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/python3.7/bin
-DESC=&quot;uwsgi daemon&quot;
-NAME=uwsgi8000diary
-DAEMON=/usr/bin/uwsgi
-CONFIGFILE=/home/centos/project/confini/$NAME.ini
-PIDFILE=/var/run/$NAME.pid
-SCRIPTNAME=/etc/init.d/$NAME
-
-set -e
-[ -x &quot;$DAEMON&quot; ] || exit 0
-
-do_start() {
-    $DAEMON --ini $CONFIGFILE || echo -n &quot;uwsgi already running&quot;
-}
-
-do_stop() {
-    $DAEMON --stop $PIDFILE || echo -n &quot;uwsgi not running&quot;
-    rm -f $PIDFILE
-    echo &quot;$DAEMON STOPED.&quot;
-}
-
-do_reload() {
-    $DAEMON --reload $PIDFILE || echo -n &quot;uwsgi can't reload&quot;
-}
-
-do_status() {
-    ps aux|grep $DAEMON
-}
-
-case &quot;$1&quot; in
- status)
-    echo -en &quot;Status $NAME: \n&quot;
-    do_status
- ;;
- start)
-    echo -en &quot;Starting $NAME: \n&quot;
-    do_start
- ;;
- stop)
-    echo -en &quot;Stopping $NAME: \n&quot;
-    do_stop
- ;;
- reload|graceful)
-    echo -en &quot;Reloading $NAME: \n&quot;
-    do_reload
- ;;
- *)
-    echo &quot;Usage: $SCRIPTNAME {start|stop|reload}&quot; &gt;&amp;2
-    exit 3
- ;;
-esac
-
-exit 0
-
-</code></pre>
-<h1 id="service-脚本-usrlibsystemdsystem">service 脚本 /usr/lib/systemd/system/</h1>
-<pre><code class="language-ini">[Unit]
-Documentation=man:systemd-sysv-generator(8)
-SourcePath=/etc/rc.d/init.d/uwsgi9500_meetbuy
-Description=LSB: starts the uwsgi web server
-Before=runlevel2.target
-Before=runlevel3.target
-Before=runlevel4.target
-Before=runlevel5.target
-Before=shutdown.target
-Before=agentwatch.service
-After=all.target
-After=network-online.target
-Conflicts=shutdown.target
-
-[Service]
-Type=forking
-Restart=no
-TimeoutSec=5min
-IgnoreSIGPIPE=no
-KillMode=process
-GuessMainPID=no
-RemainAfterExit=yes
-ExecStart=/etc/init.d/uwsgi9500_meetbuy start
-ExecStop=/etc/init.d/uwsgi9500_meetbuy stop
-ExecReload=/etc/init.d/uwsgi9500_meetbuy reload
-</code></pre>
-<h1 id="nginx中的配置">Nginx中的配置</h1>
-<pre><code class="language-nginx">    server {
-        listen       80;
-        server_name  bus.cyanzoy.top;
-
-        location / {
-           include /usr/local/nginx/conf/uwsgi_params;
-           uwsgi_pass 127.0.0.1:8000;
-
-        }
-        location /static {
-            alias   /mnt/project/Blog/static/;
-        }
-    }
-</code></pre>
-<h1 id="最终脚本">最终脚本</h1>
-<pre><code class="language-sh">#! /bin/sh
-
-# 打开项目地址
-cd /mnt/project/Blog
-# 清空启动日志
-echo &quot;&quot; &gt; /mnt/project/logs/Blog/Blog.log
-# 更新项目
-git pull origin master
-# 重启uwsgi
-systemctl stop Blog
-systemctl start Blog
-# 打开日志
-tail -fn 20 /mnt/project/logs/Blog/Blog.log
-
 </code></pre>
 ]]></content>
     </entry>
