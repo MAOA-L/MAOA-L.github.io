@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2019-12-31T03:31:47.621Z</updated>
+    <updated>2020-01-03T01:37:11.644Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
     <subtitle>为技术而生</subtitle>
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
-    <rights>All rights reserved 2019, Sigma</rights>
+    <rights>All rights reserved 2020, Sigma</rights>
     <entry>
         <title type="html"><![CDATA[✍Celebrated dictum ]]></title>
         <id>https://www.cyanzoy.top/post/2fYlO0X9T</id>
