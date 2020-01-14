@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2020-01-14T01:26:47.120Z</updated>
+    <updated>2020-01-14T01:27:04.721Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Sigma</rights>
     <entry>
-        <title type="html"><![CDATA[English Phrase]]></title>
+        <title type="html"><![CDATA[📜English Phrase]]></title>
         <id>https://www.cyanzoy.top/post/cLezMAaUT</id>
         <link href="https://www.cyanzoy.top/post/cLezMAaUT">
         </link>
