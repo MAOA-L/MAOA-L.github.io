@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1579228260533">
+<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1579246846310">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://www.cyanzoy.top/styles/main.css">
 
@@ -39,7 +39,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://www.cyanzoy.top">
-        <img src="https://www.cyanzoy.top/images/avatar.png?v=1579228260533" class="site-logo">
+        <img src="https://www.cyanzoy.top/images/avatar.png?v=1579246846310" class="site-logo">
         <h1 class="site-title">Sigma</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -174,6 +174,10 @@ custom_domains = gfrp.cyanzoy.top
 ;local_port = 22
 ;remote_port = 6000
 </code></pre>
+<p>配置新的路由</p>
+<p>route -p add 10.0.0.0 mask 255.0.0.0 10.203.68.254 if 15 metric 1    注:if后面的15表示的是有线网卡的序号<br>
+route -p add 0.0.0.0 mask 0.0.0.0 172.16.95.254 if 10 metric 2       注:if后面的10表示的是有线网卡的序号</p>
+<p>route -p add [网络地址]  mask [网络掩码]  [网关地址] if [网卡序号] metric 跃点数</p>
 
             </div>
             
