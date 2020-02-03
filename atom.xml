@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2020-01-21T01:25:51.907Z</updated>
+    <updated>2020-02-03T16:13:24.447Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Sigma</rights>
+    <entry>
+        <title type="html"><![CDATA[---+++---]]></title>
+        <id>https://www.cyanzoy.top/post/NWiRJTPbD</id>
+        <link href="https://www.cyanzoy.top/post/NWiRJTPbD">
+        </link>
+        <updated>2020-02-03T15:12:16.000Z</updated>
+        <content type="html"><![CDATA[<p>关于地域这个问题，我现在能给你的答案就是商量。<br>
+因为根据传统 女朋嫁往男方是传统，男方嫁往女方是倒插门。<br>
+但是我目前给过你的答案就是'折中'，我们可以找一个别的城市，只要能力足够。<br>
+不过你每次问我都很直接<img src="https://www.cyanzoy.top/post-images/1580743235686.png" alt="" loading="lazy"><br>
+很棘手，即使我给过你答案，你还是会这样问我，我知道你没安全感，包括很多女生，会一直问一个问题，哪怕对方回答过很多次很多次。<br>
+我和你说过很多次我很看重感情，所以你每次这样问我，或者开这种玩笑<img src="https://www.cyanzoy.top/post-images/1580743589725.png" alt="" loading="lazy"> 就像一把刀子，开一次扎一次。</p>
+<p>如果你在你爸妈那里做过很多努力，即使最后真的无法说服他们，我去江苏又如何，因为我知道你爱我，就算会被很多人说道或者看不起，就算要放弃很多东西。<br>
+如果我真的变成所谓的“上门女婿”那么我在心理上的压力，我家里的压力将会难以想象，而我要克服这一切的唯一途径，就是你。</p>
+<p>但是你每次会很直接的问我，“如果你父母不同意你嫁到宁波，怎么办”。 我们之前讨论这个问题的时候，我记得你的意思是你会向着你的父母（你说你来宁波了，你父母怎么办，你总不能丢下他们）。所以这个问题，我就感觉到我是独自一人在面对这个旷古难题，这个原本应该是我和你一起去面对和解决的问题。</p>
+<p>这个问题，我现在没有答案，也没有能力去扭转。<br>
+你的出现，说实话我已经放弃了一些我之前的打算，相信你也一样。</p>
+<p>因为是真的喜欢你，所以希望是一起去面对。<br>
+因为是真的喜欢你，所以希望是“我们”。<br>
+因为是真的喜欢你，所以你说的话我都会认真考虑。<br>
+是真的喜欢你，即使你在开玩笑，我还是会当真<br>
+是真的喜欢你，想陪你做很多事<br>
+因为喜欢你，不想欺骗你，要对你负责。</p>
+<p>你今天开的这个玩笑<br>
+<img src="https://www.cyanzoy.top/post-images/1580745482604.png" alt="" loading="lazy"><br>
+太敏感，导致问题再一次被暴露出来。<br>
+所以既然问题再一次被揭开，本着负责的态度，对你吐露我的心声。<br>
+说实话这个问题压力很大，我没有好的答案，因为缺少你的参与。<br>
+不知道你看完会怎么想。<br>
+最后，我爱你。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[📄Law]]></title>
         <id>https://www.cyanzoy.top/post/NCUEDDgzr</id>
@@ -255,26 +287,6 @@ asyncio.run(main())
 <!-- more -->
 <p>参考文章:<br>
 1.<a href="https://blog.csdn.net/YE1215172385/article/details/79750703">异常检测（一）——OneClassSVM</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[🌱Python的re模块中match、search、findall、finditer的区别]]></title>
-        <id>https://www.cyanzoy.top/post/qMULWET8f</id>
-        <link href="https://www.cyanzoy.top/post/qMULWET8f">
-        </link>
-        <updated>2019-11-11T01:18:16.000Z</updated>
-        <summary type="html"><![CDATA[<p>温习python中的re模块</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>温习python中的re模块</p>
-<!-- more -->
-<h2 id="match">match</h2>
-<p>匹配<code>string</code> <strong>开头</strong>,成功返回<code>Match object</code>, 失败返回None,只匹配一个。</p>
-<h2 id="search">search</h2>
-<p>在<code>string</code>中进行搜索,成功返回<code>Match object</code>, 失败返回None, 只匹配一个。</p>
-<h2 id="findall">findall</h2>
-<p>在<code>string</code>中查找所有匹配成功的组, 即用括号括起来的部分。返回list对象，每个<code>list item</code>是由每个匹配的所有组组成的list。</p>
-<h2 id="finditer">finditer</h2>
-<p>在<code>string</code>中查找所有匹配成功的字符串, 返回iterator,每个item是一个Match object。</p>
 ]]></content>
     </entry>
 </feed>
