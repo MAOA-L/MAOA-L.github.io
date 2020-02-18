@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2020-02-13T12:59:58.111Z</updated>
+    <updated>2020-02-18T06:38:01.192Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Sigma</rights>
+    <entry>
+        <title type="html"><![CDATA[QQ安全中心 - 动态口令的生成算法]]></title>
+        <id>https://www.cyanzoy.top/post/o12oBvxY2</id>
+        <link href="https://www.cyanzoy.top/post/o12oBvxY2">
+        </link>
+        <updated>2020-02-18T06:23:35.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>将当前北京时间向下对齐到30s，并按下面的格式格式化：<br>
+<code>yyyy-MM-dd HH:mm:ss</code><br>
+得到一个长度为19的octets，记为 timestamp。<br>
+例如，若当前北京时间为 2020-02-12 13:02:46，则向下对齐到30s，得到 timestamp 为：<br>
+<code>b'2020-02-12 13:02:30'</code></li>
+<li>将 timestamp 添加到 secret 后面，并对新的octets做SHA256运算，得到长度为32的octets，记为 digest。</li>
+</ol>
+<pre><code> # digest = hashlib.sha256(secret + timestamp).digest()
+ digest = b'\x89\x60\xf9\xeb\x42\x67\x61\x0e\x74\xc0\x98\x59\x76\x88\xaf\x6e\x25\xfb\xf2\x6b\x6c\xe3\xbe\x95\x02\xcb\xed\xd8\x3e\x0b\xf9\x44'
+</code></pre>
+<ol start="3">
+<li>将 digest 的每个octet在原位分割成高四位和低四位，得到 digest_exp。<pre><code>digest_exp = [8, 9, 6, 0, 15, 9, 14, 11, 4, 2, 6, 7, 6, 1, 0, 14, 7, 4, 12, 0, 9, 8, 5, 9, 7, 6, 8, 8, 10, 15, 6, 14, 2, 5, 15, 11, 15, 2, 6, 11, 6, 12, 14, 3, 11, 14, 9, 5, 0, 2, 12, 11, 14, 13, 13, 8, 3, 14, 0, 11, 15, 9, 4, 4]
+</code></pre>
+</li>
+<li>按照如下公式得到6位动态口令的每一位：<br>
+<img src="https://www.cyanzoy.top/post-images/1582007370133.gif" alt="" loading="lazy"></li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[蛋糕食谱]]></title>
         <id>https://www.cyanzoy.top/post/ygiNOLiCm</id>
@@ -269,20 +295,6 @@ asyncio.run(main())
 <p>参考文章:<br>
 1.<a href="https://blog.csdn.net/YE1215172385/article/details/79762317">离群点检测算法——LOF(Local Outlier Factor)</a><br>
 2.<a href="https://blog.csdn.net/YE1215172385/article/details/79766906">异常检测(三)——Local Outlier Factor(LOF)</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[🌳轨迹-异常值检测(二)]]></title>
-        <id>https://www.cyanzoy.top/post/xnOx4dk3D</id>
-        <link href="https://www.cyanzoy.top/post/xnOx4dk3D">
-        </link>
-        <updated>2019-11-11T04:58:56.000Z</updated>
-        <summary type="html"><![CDATA[<p>IsolationForest</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>IsolationForest</p>
-<!-- more -->
-<p>参考文章:<br>
-1.<a href="https://blog.csdn.net/YE1215172385/article/details/79762317">异常检测（二）——IsolationForest</a></p>
 ]]></content>
     </entry>
 </feed>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Linux性能测试 | Sigma</title>
+<title>QQ安全中心 - 动态口令的生成算法 | Sigma</title>
 <meta name="description" content="为技术而生">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -121,44 +121,37 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Linux性能测试</h2>
-            <div class="post-date">2019-10-15</div>
+            <h2 class="post-title">QQ安全中心 - 动态口令的生成算法</h2>
+            <div class="post-date">2020-02-18</div>
             
             <div class="post-content">
-              <p>原文链接 https://blog.ilemonrain.com/linux/LemonBench.html</p>
-<!-- more -->
-<h1 id="一-lemonbench-简单介绍">一、LemonBench 简单介绍</h1>
-<p>LemonBench目前涵盖了如下测试：</p>
-<p>服务器基础信息 (CPU信息/内存信息/Swap信息/磁盘空间信息等)<br>
-Speedtest网速测试 (本地到最近源及国内各地域不同线路的网速)<br>
-磁盘测试 (4K块/1M块 直接写入测试)<br>
-路由追踪测试 (追踪到国内和海外不同线路的路由信息)<br>
-Spoofer测试 (获取详细网络信息，快速判断服务器接入线路)<br>
-LemonBench使用起来非常简单，只需要复制粘贴再来个回车就可以轻松启动测试。</p>
-<h1 id="二-lemonbench-使用方法">二、LemonBench 使用方法</h1>
-<h2 id="1-快速测试">1、快速测试</h2>
-<p>如果你的服务器上安装有 <code>curl</code> 工具，请使用以下命令执行脚本：</p>
-<pre><code class="language-sh">curl -fsSL https://ilemonrain.com/download/shell/LemonBench.sh | bash -s fast
+              <ol>
+<li>将当前北京时间向下对齐到30s，并按下面的格式格式化：<br>
+<code>yyyy-MM-dd HH:mm:ss</code><br>
+得到一个长度为19的octets，记为 timestamp。<br>
+例如，若当前北京时间为 2020-02-12 13:02:46，则向下对齐到30s，得到 timestamp 为：<br>
+<code>b'2020-02-12 13:02:30'</code></li>
+<li>将 timestamp 添加到 secret 后面，并对新的octets做SHA256运算，得到长度为32的octets，记为 digest。</li>
+</ol>
+<pre><code> # digest = hashlib.sha256(secret + timestamp).digest()
+ digest = b'\x89\x60\xf9\xeb\x42\x67\x61\x0e\x74\xc0\x98\x59\x76\x88\xaf\x6e\x25\xfb\xf2\x6b\x6c\xe3\xbe\x95\x02\xcb\xed\xd8\x3e\x0b\xf9\x44'
 </code></pre>
-<p>如果你的服务器上安装有 <code>wget</code> 工具，请使用以下命令执行脚本：</p>
-<pre><code class="language-sh">wget -qO- https://ilemonrain.com/download/shell/LemonBench.sh | bash -s fast
+<ol start="3">
+<li>将 digest 的每个octet在原位分割成高四位和低四位，得到 digest_exp。<pre><code>digest_exp = [8, 9, 6, 0, 15, 9, 14, 11, 4, 2, 6, 7, 6, 1, 0, 14, 7, 4, 12, 0, 9, 8, 5, 9, 7, 6, 8, 8, 10, 15, 6, 14, 2, 5, 15, 11, 15, 2, 6, 11, 6, 12, 14, 3, 11, 14, 9, 5, 0, 2, 12, 11, 14, 13, 13, 8, 3, 14, 0, 11, 15, 9, 4, 4]
 </code></pre>
-<h2 id="2-完整测试">2、完整测试</h2>
-<p>如果你的服务器上安装有 <code>curl</code> 工具，请使用以下命令执行脚本：</p>
-<pre><code class="language-shell">curl -fsSL https://ilemonrain.com/download/shell/LemonBench.sh | bash -s full
-</code></pre>
-<p>如果你的服务器上安装有 <code>wget</code> 工具，请使用以下命令执行脚本：</p>
-<pre><code class="language-shell">wget -qO- https://ilemonrain.com/download/shell/LemonBench.sh | bash -s full
-</code></pre>
+</li>
+<li>按照如下公式得到6位动态口令的每一位：<br>
+<img src="https://www.cyanzoy.top/post-images/1582007370133.gif" alt="" loading="lazy"></li>
+</ol>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://www.cyanzoy.top/post/XQroA40u4">
+                <a href="https://www.cyanzoy.top/post/ygiNOLiCm">
                   <h3 class="post-title">
-                    🌷linux-命令
+                    蛋糕食谱
                   </h3>
                 </a>
               </div>
