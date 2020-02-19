@@ -1,312 +1,395 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" >
-
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Sigma</title>
-<meta name="description" content="为技术而生">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1582080991997">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1582090809036">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.cyanzoy.top/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150083328-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-150083328-1');
-</script>
-
-
-  </head>
-  <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://www.cyanzoy.top">
-        <img src="https://www.cyanzoy.top/images/avatar.png?v=1582080991997" class="site-logo">
-        <h1 class="site-title">Sigma</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Sigma
+        </div>
     </div>
-    <div>
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-        
-          <a href="https://www.cyanzoy.top/post/fnyLymsmv/" class="site-nav" target="_blank">
-            备忘录
-          </a>
-        
-      
-        
-          <a href="https://www.cyanzoy.top/post/WdPSaRYzX/" class="site-nav" target="_blank">
-            Menu
-          </a>
-        
-      
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://www.cyanzoy.top/post/fnyLymsmv/" class="menu gt-a-link" target="_blank">
+                            备忘录
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://www.cyanzoy.top/post/WdPSaRYzX/" class="menu gt-a-link" target="_blank">
+                            Menu
+                        </a>
+                    
+                </div>
+            
+        </div>
     </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-          <a class="social-link" href="https://github.com/MAOA-L" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-      
-        
-      
-        
-      
-        
-          <a class="social-link" href="https://www.zhihu.com/people/chen-zhou-yun-15/activities" target="_blank">
-            <i class="fab fa-zhihu"></i>
-          </a>
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      为技术而生
-    </div>
-    <div class="site-footer">
-      © 2019 CyanZoy | <a class="rss" href="https://www.cyanzoy.top/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
+</nav>
 
+        <div class="post-list-container">
+    <div class="post-inner">
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/jT7KbigLz/">
+                            <span class="post-title gt-c-content-color-first">玉米烙</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-02-19 ·
+                        </time>
+                        
+                            <a href="https://www.cyanzoy.top/tag/MlfCmDr1b/" class="post-tag">
+                                # 玉米
+                            </a>
+                        
+                            <a href="https://www.cyanzoy.top/tag/23Q46XASe/" class="post-tag">
+                                # 食谱
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/o12oBvxY2/">
+                            <span class="post-title gt-c-content-color-first">QQ安全中心 - 动态口令的生成算法</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-02-18 ·
+                        </time>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/ygiNOLiCm/">
+                            <span class="post-title gt-c-content-color-first">蛋糕食谱</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-02-13 ·
+                        </time>
+                        
+                            <a href="https://www.cyanzoy.top/tag/23Q46XASe/" class="post-tag">
+                                # 食谱
+                            </a>
+                        
+                            <a href="https://www.cyanzoy.top/tag/R_jo6frke6/" class="post-tag">
+                                # cake
+                            </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/XTKTmzCa2/">
+                            <span class="post-title gt-c-content-color-first">story</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-02-13 ·
+                        </time>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/NCUEDDgzr/">
+                            <span class="post-title gt-c-content-color-first">📄Law</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-01-17 ·
+                        </time>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/cLezMAaUT/">
+                            <span class="post-title gt-c-content-color-first">📜English Phrase</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-01-14 ·
+                        </time>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/2fYlO0X9T/">
+                            <span class="post-title gt-c-content-color-first">✍Celebrated dictum </span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2019-12-18 ·
+                        </time>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/46g2ELhQs/">
+                            <span class="post-title gt-c-content-color-first">🚢docker安装ce版本</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <p>官网 https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/centos/</p>
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/jT7KbigLz/">
-                  <h2 class="post-title">玉米烙</h2>
-                </a>
-                <div class="post-date">
-                  2020-02-19
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2019-11-29 ·
+                        </time>
+                        
+                    </div>
                 </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/o12oBvxY2/">
-                  <h2 class="post-title">QQ安全中心 - 动态口令的生成算法</h2>
-                </a>
-                <div class="post-date">
-                  2020-02-18
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/ygiNOLiCm/">
-                  <h2 class="post-title">蛋糕食谱</h2>
-                </a>
-                <div class="post-date">
-                  2020-02-13
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/XTKTmzCa2/">
-                  <h2 class="post-title">story</h2>
-                </a>
-                <div class="post-date">
-                  2020-02-13
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/NCUEDDgzr/">
-                  <h2 class="post-title">📄Law</h2>
-                </a>
-                <div class="post-date">
-                  2020-01-17
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/cLezMAaUT/">
-                  <h2 class="post-title">📜English Phrase</h2>
-                </a>
-                <div class="post-date">
-                  2020-01-14
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/2fYlO0X9T/">
-                  <h2 class="post-title">✍Celebrated dictum </h2>
-                </a>
-                <div class="post-date">
-                  2019-12-18
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/46g2ELhQs/">
-                  <h2 class="post-title">🚢docker安装ce版本</h2>
-                </a>
-                <div class="post-date">
-                  2019-11-29
-                </div>
-                <div class="post-abstract">
-                  <p>官网 https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/centos/</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/LfH2aK5oT/">
-                  <h2 class="post-title">🌾Python 异步编程asyncio模块</h2>
-                </a>
-                <div class="post-date">
-                  2019-11-21
-                </div>
-                <div class="post-abstract">
-                  <blockquote>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/LfH2aK5oT/">
+                            <span class="post-title gt-c-content-color-first">🌾Python 异步编程asyncio模块</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <blockquote>
 <p><code>asyncio</code> 模块最大特点就是，只存在一个线程，跟 <code>JavaScript</code> 一样。<br>
 由于只有一个线程，就不可能多个任务同时运行。<code>asyncio</code> 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 <code>JavaScript</code> 也是一样的。</p>
 </blockquote>
 
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2019-11-21 ·
+                        </time>
+                        
+                            <a href="https://www.cyanzoy.top/tag/paodAzutU/" class="post-tag">
+                                # python
+                            </a>
+                        
+                    </div>
                 </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/ilNuF0noL/">
-                  <h2 class="post-title">🌲Savitzky-Golay 滤波器</h2>
-                </a>
-                <div class="post-date">
-                  2019-11-13
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://www.cyanzoy.top/post/ilNuF0noL/">
+                            <span class="post-title gt-c-content-color-first">🌲Savitzky-Golay 滤波器</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2019-11-13 ·
+                        </time>
+                        
+                            <a href="https://www.cyanzoy.top/tag/DTVwVftMH/" class="post-tag">
+                                # track
+                            </a>
+                        
+                            <a href="https://www.cyanzoy.top/tag/1AZky1f9kb/" class="post-tag">
+                                # gps
+                            </a>
+                        
+                            <a href="https://www.cyanzoy.top/tag/Jy2gtx97gV/" class="post-tag">
+                                # algorithm
+                            </a>
+                        
+                    </div>
                 </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-
-          <div class="pagination-container">
-  
-  
-    <a href="https://www.cyanzoy.top/page/2" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
-  
+                
+            </div>
+        
+    </div>
 </div>
 
-        </div>
-      </div>
+        <div class="pagination-container">
+    
+    
+        <a href="https://www.cyanzoy.top/page/2" class="prev-page gt-a-link">下一页</a>
+    
+</div>
+
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">为技术而生</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+                <a href="zhihu.com/people/chen-zhou-yun-15" target="_blank">
+                    <i class="fab fa-zhihu gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
     </div>
+    © 2019 CyanZoy | <a href="https://www.cyanzoy.top/atom.xml" target="_blank">RSS</a>
+</div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
+<script>
+    hljs.initHighlightingOnLoad()
 </script>
 
-
-
-
-  </body>
+    </div>
+</div>
+</body>
 </html>
