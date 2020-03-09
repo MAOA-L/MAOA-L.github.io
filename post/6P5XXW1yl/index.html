@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>🌱Python的re模块中match、search、findall、finditer的区别 | Sigma</title>
+<title>Supervisor | Sigma</title>
 <meta name="description" content="为技术而生">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -121,30 +121,38 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">🌱Python的re模块中match、search、findall、finditer的区别</h2>
-            <div class="post-date">2019-11-11</div>
-            
-              <div class="feature-container" style="background-image: url('https://www.cyanzoy.top/post-images/qMULWET8f.jpg')">
-              </div>
+            <h2 class="post-title">Supervisor</h2>
+            <div class="post-date">2020-03-09</div>
             
             <div class="post-content">
-              <p>温习python中的re模块</p>
-<!-- more -->
-<h2 id="match">match</h2>
-<p>匹配<code>string</code> <strong>开头</strong>,成功返回<code>Match object</code>, 失败返回None,只匹配一个。</p>
-<h2 id="search">search</h2>
-<p>在<code>string</code>中进行搜索,成功返回<code>Match object</code>, 失败返回None, 只匹配一个。</p>
-<h2 id="findall">findall</h2>
-<p>在<code>string</code>中查找所有匹配成功的组, 即用括号括起来的部分。返回list对象，每个<code>list item</code>是由每个匹配的所有组组成的list。</p>
-<h2 id="finditer">finditer</h2>
-<p>在<code>string</code>中查找所有匹配成功的字符串, 返回iterator,每个item是一个Match object。</p>
+              <ol>
+<li>
+<h1 id="安装-建立软连接">安装 建立软连接</h1>
+yum install supervisor</li>
+<li>
+<h1 id="supervisor-本身">supervisor 本身</h1>
+</li>
+</ol>
+<p>项目 <code>/etc/supervisord.conf</code>  配置了 <code>supervisor</code>的基本配置文件，<br>
+取消[inet_http_server] 配置单元的注释<br>
+使用 <code>supervisord -c /etc/supervisord.conf</code><br>
+或者<code>supervisorctl -c /etc/supervisord.conf</code> 启动supervisor，修改完配置文件之后，使用<code>supervisorctl reload</code>重启supervisor</p>
+<ol start="3">
+<li>
+<h1 id="super下的应用">super下的应用</h1>
+</li>
+</ol>
 
             </div>
             
               <div class="tag-container">
                 
-                  <a href="https://www.cyanzoy.top/tag/paodAzutU/" class="tag">
-                    python
+                  <a href="https://www.cyanzoy.top/tag/EwU98wKEE/" class="tag">
+                    supervisor
+                  </a>
+                
+                  <a href="https://www.cyanzoy.top/tag/WgJ98DRIP/" class="tag">
+                    Service
                   </a>
                 
               </div>
@@ -152,9 +160,9 @@
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://www.cyanzoy.top/post/PZwpK-fkr/">
+                <a href="https://www.cyanzoy.top/post/jT7KbigLz/">
                   <h3 class="post-title">
-                    IRR
+                    玉米烙
                   </h3>
                 </a>
               </div>
