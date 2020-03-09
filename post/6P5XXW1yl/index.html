@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1583725752947">
+<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1583733538858">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://www.cyanzoy.top/styles/main.css">
 
@@ -39,7 +39,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://www.cyanzoy.top">
-        <img src="https://www.cyanzoy.top/images/avatar.png?v=1583725752947" class="site-logo">
+        <img src="https://www.cyanzoy.top/images/avatar.png?v=1583733538858" class="site-logo">
         <h1 class="site-title">Sigma</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -125,23 +125,15 @@
             <div class="post-date">2020-03-09</div>
             
             <div class="post-content">
-              <ol>
-<li>
-<h1 id="安装-建立软连接">安装 建立软连接</h1>
-yum install supervisor</li>
-<li>
-<h1 id="supervisor-本身">supervisor 本身</h1>
-</li>
-</ol>
+              <h1 id="1-安装-建立软连接">1. 安装 建立软连接</h1>
+<pre><code>yum install supervisor
+</code></pre>
+<h1 id="2-supervisor-本身">2.  supervisor 本身</h1>
 <p>项目 <code>/etc/supervisord.conf</code>  配置了 <code>supervisor</code>的基本配置文件，<br>
 取消[inet_http_server] 配置单元的注释<br>
 使用 <code>supervisord -c /etc/supervisord.conf</code><br>
 或者<code>supervisorctl -c /etc/supervisord.conf</code> 启动supervisor，修改完配置文件之后，使用<code>supervisorctl reload</code>重启supervisor</p>
-<ol start="3">
-<li>
-<h1 id="super下的应用">super下的应用</h1>
-</li>
-</ol>
+<h1 id="3-super下的应用">3. super下的应用</h1>
 
             </div>
             

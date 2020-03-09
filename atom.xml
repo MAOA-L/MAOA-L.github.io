@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2020-03-09T03:49:18.436Z</updated>
+    <updated>2020-03-09T05:59:01.933Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -16,23 +16,15 @@
         <link href="https://www.cyanzoy.top/post/6P5XXW1yl/">
         </link>
         <updated>2020-03-09T03:43:46.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li>
-<h1 id="安装-建立软连接">安装 建立软连接</h1>
-yum install supervisor</li>
-<li>
-<h1 id="supervisor-本身">supervisor 本身</h1>
-</li>
-</ol>
+        <content type="html"><![CDATA[<h1 id="1-安装-建立软连接">1. 安装 建立软连接</h1>
+<pre><code>yum install supervisor
+</code></pre>
+<h1 id="2-supervisor-本身">2.  supervisor 本身</h1>
 <p>项目 <code>/etc/supervisord.conf</code>  配置了 <code>supervisor</code>的基本配置文件，<br>
 取消[inet_http_server] 配置单元的注释<br>
 使用 <code>supervisord -c /etc/supervisord.conf</code><br>
 或者<code>supervisorctl -c /etc/supervisord.conf</code> 启动supervisor，修改完配置文件之后，使用<code>supervisorctl reload</code>重启supervisor</p>
-<ol start="3">
-<li>
-<h1 id="super下的应用">super下的应用</h1>
-</li>
-</ol>
+<h1 id="3-super下的应用">3. super下的应用</h1>
 ]]></content>
     </entry>
     <entry>
