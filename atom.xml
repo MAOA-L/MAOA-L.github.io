@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2020-04-20T08:16:58.085Z</updated>
+    <updated>2020-04-20T09:31:26.929Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -48,33 +48,6 @@ route -p add 192.0.0.0 mask 255.255.255.0 192.168.0.1 路由地址 掩码 网关
 使用 <code>supervisord -c /etc/supervisord.conf</code><br>
 或者<code>supervisorctl -c /etc/supervisord.conf</code> 启动supervisor，修改完配置文件之后，使用<code>supervisorctl reload</code>重启supervisor</p>
 <h1 id="3-super下的应用">3. super下的应用</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[玉米烙]]></title>
-        <id>https://www.cyanzoy.top/post/jT7KbigLz/</id>
-        <link href="https://www.cyanzoy.top/post/jT7KbigLz/">
-        </link>
-        <updated>2020-02-19T02:44:05.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="用料">用料</h1>
-<ol>
-<li>甜玉米	两根（煮熟后取下玉米粒净重约300g）</li>
-<li>干淀粉	四汤匙（约40g）</li>
-<li>白砂糖	适量</li>
-</ol>
-<h1 id="步骤">步骤</h1>
-<ol>
-<li>甜玉米放水煮熟，大约五分钟<img src="https://www.cyanzoy.top/post-images/1582080757668.png" alt="" loading="lazy"></li>
-<li>煮熟的甜玉米取出放凉后，用刀贴着玉米棒取下玉米粒，这样取下的玉米粒会粘在一起，需要用手把它们分开成一粒粒的<img src="https://www.cyanzoy.top/post-images/1582080766448.png" alt="" loading="lazy"></li>
-<li>放在筛网里，用水把玉米粒表面冲湿，稍稍甩两下，甩去多余水分<img src="https://www.cyanzoy.top/post-images/1582080770722.png" alt="" loading="lazy"></li>
-<li>把玉米粒和干淀粉拌匀，使玉米粒表面都粘上淀粉。（玉米粒表面不能太干，需要有些湿湿的，否则裹不上淀粉）<img src="https://www.cyanzoy.top/post-images/1582080776266.png" alt="" loading="lazy"></li>
-<li>锅中放半碗油烧热后，倒出<img src="https://www.cyanzoy.top/post-images/1582080780284.png" alt="" loading="lazy"></li>
-<li><strong>转小火</strong>，此时锅中留一点点油<img src="https://www.cyanzoy.top/post-images/1582080783774.png" alt="" loading="lazy"></li>
-<li>把玉米粒倒入，可用手背轻轻把玉米粒摊平。接着用<strong>小火煎三到五分钟</strong>左右，让玉米粒都粘连在一起成整块饼状，（煎的过程中不能动玉米粒，否则会散。可以端起整个锅轻轻晃动）<img src="https://www.cyanzoy.top/post-images/1582080788794.png" alt="" loading="lazy"></li>
-<li>此时加入刚才加热后倒出的油，油量要没过玉米粒。转中火升高油温，炸<strong>三分钟</strong>至玉米粒金黄酥脆<img src="https://www.cyanzoy.top/post-images/1582080797072.png" alt="" loading="lazy"></li>
-<li>关火，用锅铲帮助倒出锅中的油</li>
-<li>撒上一些粗砂糖</li>
-</ol>
 ]]></content>
     </entry>
     <entry>
@@ -308,6 +281,46 @@ docker-ce.x86_64            17.09.ce-1.el7.centos             docker-ce-stable
 <blockquote>
 <p>To upgrade Docker CE, download the newer package file and repeat the installation procedure, using <code>yum -y upgrade</code> instead of <code>yum -y install</code>, and pointing to the new file.</p>
 </blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[🌾Python 异步编程asyncio模块]]></title>
+        <id>https://www.cyanzoy.top/post/LfH2aK5oT/</id>
+        <link href="https://www.cyanzoy.top/post/LfH2aK5oT/">
+        </link>
+        <updated>2019-11-21T07:44:10.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p><code>asyncio</code> 模块最大特点就是，只存在一个线程，跟 <code>JavaScript</code> 一样。<br>
+由于只有一个线程，就不可能多个任务同时运行。<code>asyncio</code> 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 <code>JavaScript</code> 也是一样的。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p><code>asyncio</code> 模块最大特点就是，只存在一个线程，跟 <code>JavaScript</code> 一样。<br>
+由于只有一个线程，就不可能多个任务同时运行。<code>asyncio</code> 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 <code>JavaScript</code> 也是一样的。</p>
+</blockquote>
+<!-- more -->
+<blockquote>
+<p>由于代码的执行权在多个任务之间交换，所以看上去好像多个任务同时运行，其实底层只有一个线程，多个任务分享运行时间。</p>
+</blockquote>
+<blockquote>
+<p>表面上，这是一个不合理的设计，明明有多线程多进程的能力，为什么放着多余的 <code>CPU</code> 核心不用，而只用一个线程呢？但是就像前面说的，单线程简化了很多问题，使得代码逻辑变得简单，写法符合直觉。<br>
+<code>asyncio</code> 模块在单线程上启动一个事件循环(event loop)，时刻监听新进入循环的事件，加以处理，并不断重复这个过程，直到异步任务结束。事件循环的内部机制，可以参考 <code>JavaScript</code> 的模型，两者是一样的。</p>
+</blockquote>
+<pre><code class="language-python">#!/usr/bin/env python3
+# async.py
+# python3.7 及以上
+import asyncio
+
+async def count():
+    print(&quot;One&quot;)
+    await asyncio.sleep(1)
+    print(&quot;Two&quot;)
+
+async def main():
+    await asyncio.gather(count(), count(), count())
+
+asyncio.run(main())
+</code></pre>
 ]]></content>
     </entry>
 </feed>
