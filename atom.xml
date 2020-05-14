@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2020-04-21T01:22:56.410Z</updated>
+    <updated>2020-05-14T07:13:10.848Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Sigma</rights>
+    <entry>
+        <title type="html"><![CDATA[挑水果]]></title>
+        <id>https://www.cyanzoy.top/post/Z9HjxE7Ma/</id>
+        <link href="https://www.cyanzoy.top/post/Z9HjxE7Ma/">
+        </link>
+        <updated>2020-05-14T07:12:27.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://www.cyanzoy.top/post-images/1589440356098.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[笔记本双网卡实现内外网同时访问]]></title>
         <id>https://www.cyanzoy.top/post/BXAV9aBpF/</id>
@@ -281,46 +290,6 @@ docker-ce.x86_64            17.09.ce-1.el7.centos             docker-ce-stable
 <blockquote>
 <p>To upgrade Docker CE, download the newer package file and repeat the installation procedure, using <code>yum -y upgrade</code> instead of <code>yum -y install</code>, and pointing to the new file.</p>
 </blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[🌾Python 异步编程asyncio模块]]></title>
-        <id>https://www.cyanzoy.top/post/LfH2aK5oT/</id>
-        <link href="https://www.cyanzoy.top/post/LfH2aK5oT/">
-        </link>
-        <updated>2019-11-21T07:44:10.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p><code>asyncio</code> 模块最大特点就是，只存在一个线程，跟 <code>JavaScript</code> 一样。<br>
-由于只有一个线程，就不可能多个任务同时运行。<code>asyncio</code> 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 <code>JavaScript</code> 也是一样的。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p><code>asyncio</code> 模块最大特点就是，只存在一个线程，跟 <code>JavaScript</code> 一样。<br>
-由于只有一个线程，就不可能多个任务同时运行。<code>asyncio</code> 是&quot;多任务合作&quot;模式(cooperative multitasking)，允许异步任务交出执行权给其他任务，等到其他任务完成，再收回执行权继续往下执行，这跟 <code>JavaScript</code> 也是一样的。</p>
-</blockquote>
-<!-- more -->
-<blockquote>
-<p>由于代码的执行权在多个任务之间交换，所以看上去好像多个任务同时运行，其实底层只有一个线程，多个任务分享运行时间。</p>
-</blockquote>
-<blockquote>
-<p>表面上，这是一个不合理的设计，明明有多线程多进程的能力，为什么放着多余的 <code>CPU</code> 核心不用，而只用一个线程呢？但是就像前面说的，单线程简化了很多问题，使得代码逻辑变得简单，写法符合直觉。<br>
-<code>asyncio</code> 模块在单线程上启动一个事件循环(event loop)，时刻监听新进入循环的事件，加以处理，并不断重复这个过程，直到异步任务结束。事件循环的内部机制，可以参考 <code>JavaScript</code> 的模型，两者是一样的。</p>
-</blockquote>
-<pre><code class="language-python">#!/usr/bin/env python3
-# async.py
-# python3.7 及以上
-import asyncio
-
-async def count():
-    print(&quot;One&quot;)
-    await asyncio.sleep(1)
-    print(&quot;Two&quot;)
-
-async def main():
-    await asyncio.gather(count(), count(), count())
-
-asyncio.run(main())
-</code></pre>
 ]]></content>
     </entry>
 </feed>
