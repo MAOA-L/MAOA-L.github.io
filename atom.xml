@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>Sigma</title>
-    <updated>2020-05-14T07:13:10.848Z</updated>
+    <updated>2020-05-18T01:06:22.031Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2020, Sigma</rights>
+    <entry>
+        <title type="html"><![CDATA[🌷linux-问题记录]]></title>
+        <id>https://www.cyanzoy.top/post/I9Yc7IbC1/</id>
+        <link href="https://www.cyanzoy.top/post/I9Yc7IbC1/">
+        </link>
+        <updated>2020-05-18T01:05:21.000Z</updated>
+        <summary type="html"><![CDATA[<p>pip安装时报【fatal error: Python.h: No such file or directory compilation terminated】错误</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>pip安装时报【fatal error: Python.h: No such file or directory compilation terminated】错误</p>
+<!-- more -->
+<p>用pip安装第三方包的时候，有时候会遇到fatal error: Python.h: No such file or directory compilation terminated这样的报错。因为这些库使用了c扩展，需要编译，然后又找不到头文件和静态库导致的。编译这些c库需要的依赖库由python dev提供，安装即可：</p>
+<pre><code>sudo yum install python-devel   # for python2.x installs
+sudo yum install python34-devel   # for python3.4 installs
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[挑水果]]></title>
         <id>https://www.cyanzoy.top/post/Z9HjxE7Ma/</id>
@@ -180,115 +196,6 @@ route -p add 192.0.0.0 mask 255.255.255.0 192.168.0.1 路由地址 掩码 网关
 </blockquote>
 <blockquote>
 <p>村上春树有一句话“我告诉你我喜欢你，并不是一定要和你在一起，只是希望今后的你，在遭遇人生低谷的时候，不要灰心，至少曾经有人被你的魅力所吸引，曾经是，以后也会是”</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[🚢docker安装ce版本]]></title>
-        <id>https://www.cyanzoy.top/post/46g2ELhQs/</id>
-        <link href="https://www.cyanzoy.top/post/46g2ELhQs/">
-        </link>
-        <updated>2019-11-29T03:45:12.000Z</updated>
-        <summary type="html"><![CDATA[<p>官网 https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/centos/</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>官网 https://docs.docker.com/v17.09/engine/installation/linux/docker-ce/centos/</p>
-<!-- more -->
-<h1 id="uninstall-old-versions">Uninstall old versions</h1>
-<blockquote>
-<p>Older versions of Docker were called docker or docker-engine. If these are installed, uninstall them, along with associated dependencies.</p>
-</blockquote>
-<pre><code>$ sudo yum remove docker \
-                  docker-common \
-                  docker-selinux \
-                  docker-engine
-</code></pre>
-<h1 id="方法一">方法一:</h1>
-<h2 id="install-using-the-repository">Install using the repository</h2>
-<p><strong>SET UP THE REPOSITORY</strong></p>
-<blockquote>
-<p>Install required packages. yum-utils provides the yum-config-manager utility, and device-mapper-persistent-data and lvm2 are required by the devicemapper storage driver.</p>
-</blockquote>
-<pre><code>$ sudo yum install -y yum-utils \
-  device-mapper-persistent-data \
-  lvm2
-</code></pre>
-<blockquote>
-<p>Use the following command to set up the stable repository. You always need the stable repository, even if you want to install builds from the edge or test repositories as well.</p>
-</blockquote>
-<pre><code>$ sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
-</code></pre>
-<blockquote>
-<p>Optional: Enable the edge and test repositories. These repositories are included in the docker.repo file above but are disabled by default. You can enable them alongside the stable repository.</p>
-</blockquote>
-<pre><code>$ sudo yum-config-manager --enable docker-ce-edge
-$ sudo yum-config-manager --enable docker-ce-test
-</code></pre>
-<blockquote>
-<p>You can disable the edge or test repository by running the yum-config-manager command with the --disable flag. To re-enable it, use the --enable flag. The following command disables the edge repository.</p>
-</blockquote>
-<pre><code>$ sudo yum-config-manager --disable docker-ce-edge
-</code></pre>
-<blockquote>
-<p>Note: Starting with Docker 17.06, stable releases are also pushed to the edge and test repositories.</p>
-</blockquote>
-<h2 id="learn-about-stable-and-edge-builds">Learn about stable and edge builds.</h2>
-<p><strong>INSTALL DOCKER CE</strong></p>
-<ol>
-<li>Install the latest version of Docker CE, or go to the next step to install a specific version.</li>
-</ol>
-<pre><code>$ sudo yum install docker-ce
-</code></pre>
-<ol start="2">
-<li>On production systems, you should install a specific version of Docker CE instead of always using the latest. List the available versions. This example uses the sort -r command to sort the results by version number, highest to lowest, and is truncated.</li>
-</ol>
-<pre><code>$ yum list docker-ce --showduplicates | sort -r
-
-docker-ce.x86_64            17.09.ce-1.el7.centos             docker-ce-stable
-</code></pre>
-<pre><code>$ sudo yum install &lt;FULLY-QUALIFIED-PACKAGE-NAME&gt;
-</code></pre>
-<ol start="3">
-<li>Start Docker.</li>
-</ol>
-<pre><code>$ sudo systemctl start docker
-</code></pre>
-<blockquote>
-<p>Verify that docker is installed correctly by running the hello-world image.</p>
-</blockquote>
-<pre><code>$ sudo docker run hello-world
-</code></pre>
-<h1 id="方法二">方法二:</h1>
-<h2 id="install-from-a-package">Install from a package</h2>
-<blockquote>
-<p>Go to <a href="https://download.docker.com/linux/centos/7/x86_64/stable/Packages/">https://download.docker.com/linux/centos/7/x86_64/stable/Packages/</a> and download the .rpm file for the Docker version you want to install.</p>
-</blockquote>
-<blockquote>
-<p>Note: To install an edge package, change the word stable in the above URL to edge. Learn about stable and edge channels.</p>
-</blockquote>
-<blockquote>
-<p>Install Docker CE, changing the path below to the path where you downloaded the Docker package.</p>
-</blockquote>
-<pre><code>$ sudo yum install /path/to/package.rpm
-</code></pre>
-<blockquote>
-<p>Docker is installed but not started. The docker group is created, but no users are added to the group.</p>
-</blockquote>
-<p><code>Start Docker.</code></p>
-<pre><code>$ sudo systemctl start docker
-</code></pre>
-<blockquote>
-<p>Verify that docker is installed correctly by running the hello-world image.</p>
-</blockquote>
-<pre><code>$ sudo docker run hello-world
-</code></pre>
-<blockquote>
-<p>This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.</p>
-</blockquote>
-<h1 id="upgrade-docker-ce">UPGRADE DOCKER CE</h1>
-<blockquote>
-<p>To upgrade Docker CE, download the newer package file and repeat the installation procedure, using <code>yum -y upgrade</code> instead of <code>yum -y install</code>, and pointing to the new file.</p>
 </blockquote>
 ]]></content>
     </entry>

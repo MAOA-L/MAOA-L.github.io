@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Git 笔记 | Sigma</title>
+<title>🌷linux-问题记录 | Sigma</title>
 <meta name="description" content="为技术而生">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -121,74 +121,28 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Git 笔记</h2>
-            <div class="post-date">2019-09-17</div>
-            
-              <div class="feature-container" style="background-image: url('https://www.cyanzoy.top/post-images/git-bi-ji.jpg')">
-              </div>
+            <h2 class="post-title">🌷linux-问题记录</h2>
+            <div class="post-date">2020-05-18</div>
             
             <div class="post-content">
-              <p>git的一些命令记录</p>
+              <p>pip安装时报【fatal error: Python.h: No such file or directory compilation terminated】错误</p>
 <!-- more -->
-<p>🔹Git 添加远程仓库关联</p>
-<pre><code>git remote add origin git@github.com:MAOA-L/AliPayApplet.git
-git push -u origin master 
-#这句一般与上句一起用。用于远程仓库没有初始化时
+<p>用pip安装第三方包的时候，有时候会遇到fatal error: Python.h: No such file or directory compilation terminated这样的报错。因为这些库使用了c扩展，需要编译，然后又找不到头文件和静态库导致的。编译这些c库需要的依赖库由python dev提供，安装即可：</p>
+<pre><code>sudo yum install python-devel   # for python2.x installs
+sudo yum install python34-devel   # for python3.4 installs
 </code></pre>
-<p>🔸Git 本地分支关联远程分支</p>
-<pre><code>git branch --set-upstream-to=origin/remote_branch  your_branch
-</code></pre>
-<p>🔹Git 删除本地分支</p>
-<pre><code>git branch -d [branchname]
-</code></pre>
-<p>🔸Git 删除远程分支</p>
-<pre><code>git push origin --delete [branchname]
-</code></pre>
-<p>🔹Git stash暂存,恢复,删除</p>
-<blockquote>
-<p>暂存</p>
-</blockquote>
-<pre><code>git stash
-保存当前工作进度，会把暂存区和工作区的改动保存起来。执行完这个命令后，在运行git status命令，就会发现当前是一个干净的工作区，没有任何改动。使用git stash save 'message...'可以添加一些注释
-</code></pre>
-<blockquote>
-<p>恢复</p>
-</blockquote>
-<pre><code>git stash pop [–index] [stash_id]
-git stash pop 恢复最新的进度到工作区。git默认会把工作区和暂存区的改动都恢复到工作区。
-git stash pop --index 恢复最新的进度到工作区和暂存区。（尝试将原来暂存区的改动还恢复到暂存区）
-git stash pop stash@{1}恢复指定的进度到工作区。stash_id是通过git stash list命令得到的
-通过git stash pop命令恢复进度后，会删除当前进度。
-git stash apply [–index] [stash_id]
-除了不删除恢复的进度之外，其余和git stash pop 命令一样。
-</code></pre>
-<blockquote>
-<p>删除</p>
-</blockquote>
-<pre><code>git stash drop [stash_id]
-删除一个存储的进度。如果不指定stash_id，则默认删除最新的存储进度。
-
-git stash clear
-删除所有存储的进度。
-</code></pre>
-<blockquote>
-<p><code>Q&amp;A</code><br>
-🧐: git branch 不显示分支原因<br>
-🤪: git branch要在git commit后才会显示分支.<br>
-🧐:nginx的location、root、alias指令用法和区别<br>
-🤪:</p>
-</blockquote>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://www.cyanzoy.top/tag/6YCSx16wgZ/" class="tag">
-                    Git
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.cyanzoy.top/post/Z9HjxE7Ma/">
+                  <h3 class="post-title">
+                    挑水果
+                  </h3>
+                </a>
+              </div>
             
 
             
