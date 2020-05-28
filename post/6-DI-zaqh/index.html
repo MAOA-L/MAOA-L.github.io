@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>QQ安全中心 - 动态口令的生成算法 | echo-7s</title>
+<title>jd | echo-7s</title>
 <meta name="description" content="为技术而生">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -121,37 +121,27 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">QQ安全中心 - 动态口令的生成算法</h2>
-            <div class="post-date">2020-02-18</div>
+            <h2 class="post-title">jd</h2>
+            <div class="post-date">2020-05-28</div>
             
             <div class="post-content">
-              <ol>
-<li>将当前北京时间向下对齐到30s，并按下面的格式格式化：<br>
-<code>yyyy-MM-dd HH:mm:ss</code><br>
-得到一个长度为19的octets，记为 timestamp。<br>
-例如，若当前北京时间为 2020-02-12 13:02:46，则向下对齐到30s，得到 timestamp 为：<br>
-<code>b'2020-02-12 13:02:30'</code></li>
-<li>将 timestamp 添加到 secret 后面，并对新的octets做SHA256运算，得到长度为32的octets，记为 digest。</li>
-</ol>
-<pre><code> # digest = hashlib.sha256(secret + timestamp).digest()
- digest = b'\x89\x60\xf9\xeb\x42\x67\x61\x0e\x74\xc0\x98\x59\x76\x88\xaf\x6e\x25\xfb\xf2\x6b\x6c\xe3\xbe\x95\x02\xcb\xed\xd8\x3e\x0b\xf9\x44'
-</code></pre>
-<ol start="3">
-<li>将 digest 的每个octet在原位分割成高四位和低四位，得到 digest_exp。<pre><code>digest_exp = [8, 9, 6, 0, 15, 9, 14, 11, 4, 2, 6, 7, 6, 1, 0, 14, 7, 4, 12, 0, 9, 8, 5, 9, 7, 6, 8, 8, 10, 15, 6, 14, 2, 5, 15, 11, 15, 2, 6, 11, 6, 12, 14, 3, 11, 14, 9, 5, 0, 2, 12, 11, 14, 13, 13, 8, 3, 14, 0, 11, 15, 9, 4, 4]
-</code></pre>
-</li>
-<li>按照如下公式得到6位动态口令的每一位：<br>
-<img src="https://www.cyanzoy.top/post-images/1582007370133.gif" alt="" loading="lazy"></li>
-</ol>
+              <p>推广地址1：京东618大促主会场<br>
+PC：<a href="https://u.jd.com/LBanOW">https://u.jd.com/LBanOW</a><br>
+APP：<a href="https://u.jd.com/MFA6fB">https://u.jd.com/MFA6fB</a><br>
+推广地址2：京东超市618大促会场<br>
+PC：<a href="https://u.jd.com/50pslU">https://u.jd.com/50pslU</a><br>
+APP：<a href="https://u.jd.com/CaXNwU">https://u.jd.com/CaXNwU</a><br>
+推广地址3：京喜618福利好货会场<br>
+APP：<a href="https://u.jd.com/9Z7QEV">https://u.jd.com/9Z7QEV</a></p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://www.cyanzoy.top/post/ygiNOLiCm/">
+                <a href="https://www.cyanzoy.top/post/I9Yc7IbC1/">
                   <h3 class="post-title">
-                    蛋糕食谱
+                    🌷linux-问题记录
                   </h3>
                 </a>
               </div>

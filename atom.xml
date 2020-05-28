@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>echo-7s</title>
-    <updated>2020-05-18T02:03:53.917Z</updated>
+    <updated>2020-05-28T01:28:08.193Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2020, echo-7s</rights>
+    <entry>
+        <title type="html"><![CDATA[jd]]></title>
+        <id>https://www.cyanzoy.top/post/6-DI-zaqh/</id>
+        <link href="https://www.cyanzoy.top/post/6-DI-zaqh/">
+        </link>
+        <updated>2020-05-28T01:25:37.000Z</updated>
+        <content type="html"><![CDATA[<p>推广地址1：京东618大促主会场<br>
+PC：<a href="https://u.jd.com/LBanOW">https://u.jd.com/LBanOW</a><br>
+APP：<a href="https://u.jd.com/MFA6fB">https://u.jd.com/MFA6fB</a><br>
+推广地址2：京东超市618大促会场<br>
+PC：<a href="https://u.jd.com/50pslU">https://u.jd.com/50pslU</a><br>
+APP：<a href="https://u.jd.com/CaXNwU">https://u.jd.com/CaXNwU</a><br>
+推广地址3：京喜618福利好货会场<br>
+APP：<a href="https://u.jd.com/9Z7QEV">https://u.jd.com/9Z7QEV</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[🌷linux-问题记录]]></title>
         <id>https://www.cyanzoy.top/post/I9Yc7IbC1/</id>
@@ -168,35 +184,6 @@ route -p add 192.0.0.0 mask 255.255.255.0 192.168.0.1 路由地址 掩码 网关
 <li>You wish!  想的美</li>
 <li>Not a chance!   休想!</li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[✍Celebrated dictum ]]></title>
-        <id>https://www.cyanzoy.top/post/2fYlO0X9T/</id>
-        <link href="https://www.cyanzoy.top/post/2fYlO0X9T/">
-        </link>
-        <updated>2019-12-18T04:51:11.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>我野蛮生长，没能成为自己的月亮。<br>
-能遇见你<br>
-是银河慷慨赠予我的糖。</p>
-</blockquote>
-<blockquote>
-<p>You are my today and all of tomorrows</p>
-</blockquote>
-<blockquote>
-<p>Cherish</p>
-</blockquote>
-<blockquote>
-<p>小时候不理解老人晒太阳，一坐就是半天。长大了才明白，目之所及皆是回忆，心之所想皆是过往，眼之所看皆是遗憾。</p>
-</blockquote>
-<blockquote>
-<p>李白写过那么多诗，他自己会背吗？”<br>
-“像李白那么不羁的人，估计写完就忘，放不下的是我们俗人自己。”</p>
-</blockquote>
-<blockquote>
-<p>村上春树有一句话“我告诉你我喜欢你，并不是一定要和你在一起，只是希望今后的你，在遭遇人生低谷的时候，不要灰心，至少曾经有人被你的魅力所吸引，曾经是，以后也会是”</p>
-</blockquote>
 ]]></content>
     </entry>
 </feed>
