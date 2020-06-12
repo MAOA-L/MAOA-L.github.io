@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
-    <title>echo-7s</title>
-    <updated>2020-06-12T02:44:48.406Z</updated>
+    <title>sigma</title>
+    <updated>2020-06-12T02:45:16.949Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
     <subtitle>为技术而生</subtitle>
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
-    <rights>All rights reserved 2020, echo-7s</rights>
+    <rights>All rights reserved 2020, sigma</rights>
     <entry>
         <title type="html"><![CDATA[说明书备份]]></title>
         <id>https://www.cyanzoy.top/post/ofCq4tNCT/</id>
