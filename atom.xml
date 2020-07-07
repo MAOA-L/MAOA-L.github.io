@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>sigma</title>
-    <updated>2020-07-07T06:08:00.000Z</updated>
+    <updated>2020-07-07T10:13:34.868Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2020, sigma</rights>
+    <entry>
+        <title type="html"><![CDATA[Room]]></title>
+        <id>https://www.cyanzoy.top/post/OjllcIH4O/</id>
+        <link href="https://www.cyanzoy.top/post/OjllcIH4O/">
+        </link>
+        <updated>2020-07-07T09:58:23.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="奉化">奉化</h1>
+<h2 id="湖风雅园">湖风雅园</h2>
+<p><a href="https://newhouse.cnnbfdc.com/project/details/92c061ff-3325-ea11-8de3-005056b87983">住建局信息</a><br>
+<a href="https://map.baidu.com/poi/%E4%BF%9D%E4%BA%BF%E6%B9%96%E9%A3%8E%E9%9B%85%E5%9B%AD/@13520686.920658123,3447765.792940078,15.06z?uid=2bef127234699bb3593ac822&amp;ugc_type=3&amp;ugc_ver=1&amp;device_ratio=1&amp;compat=1&amp;querytype=detailConInfo&amp;da_src=shareurl">地点</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[九价-信息]]></title>
         <id>https://www.cyanzoy.top/post/acghhaSlR/</id>
@@ -156,26 +168,6 @@ route -p add 192.0.0.0 mask 255.255.255.0 192.168.0.1 路由地址 掩码 网关
 <li>按照如下公式得到6位动态口令的每一位：<br>
 <img src="https://www.cyanzoy.top/post-images/1582007370133.gif" alt="" loading="lazy"></li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[蛋糕食谱]]></title>
-        <id>https://www.cyanzoy.top/post/ygiNOLiCm/</id>
-        <link href="https://www.cyanzoy.top/post/ygiNOLiCm/">
-        </link>
-        <updated>2020-02-13T12:49:00.000Z</updated>
-        <content type="html"><![CDATA[<ol>
-<li>戚风蛋糕<br>
-<img src="https://www.cyanzoy.top/post-images/1581598258423.png" alt="" loading="lazy"></li>
-</ol>
-<p>水浴法 160℃ 50分钟</p>
-<ul>
-<li>牛奶+油+糖 搅拌均匀</li>
-<li>加热 微沸腾</li>
-<li>加入粉（烫面，就是烫面粉，经过此步骤蛋糕组织会变得更细腻柔滑。）把面粉直接过筛倒奶锅里烫，拿蛋抽（小点的蛋抽，大了拌不到面粉）拿蛋抽<strong>快速的画两三圈搅拌</strong>至看不到干粉就停。</li>
-<li>再以 <strong>Z型</strong> 手法快速的把面粉与液体彻底混合，使面团变得越来越光滑。</li>
-<li>蛋黄分次混合；（扔蛋黄前一定要确认面团是否已经冷却或只剩一点余温，否则把蛋黄都烫熟了，蛋黄糊便会过于浓稠），用打蛋器以“Z型”手法把蛋黄和面团混合，<strong>不能画圈搅拌</strong>。</li>
-</ul>
 ]]></content>
     </entry>
 </feed>
