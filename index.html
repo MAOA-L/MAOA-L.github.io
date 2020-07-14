@@ -1,309 +1,531 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" >
+<html lang="zh-CN">
 
+<head>
+    <meta charset="UTF-8" />
 <title>sigma</title>
 <meta name="description" content="为技术而生">
-
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://www.cyanzoy.top/favicon.ico?v=1594116924533">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://www.cyanzoy.top/styles/main.css">
+<link type='text/css' rel='stylesheet' href='https://www.cyanzoy.top/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script type="text/javascript" src='https://www.cyanzoy.top/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150083328-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-150083328-1');
+    hljs.initHighlightingOnLoad();
 </script>
+</head>
+
+<body>
+
+    <div class="layout theme-dark">
+
+        <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="https://www.cyanzoy.top">
+								<img class="logo"
+									src="https://www.cyanzoy.top/media/images/site_avatar.png?v=1594709396997"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="首页"
+										href="/">首页</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="归档"
+										href="/archives">归档</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="标签"
+										href="/tags">标签</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="关于"
+										href="/post/about">关于</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="备忘录"
+										href="https://www.cyanzoy.top/post/fnyLymsmv/">备忘录</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="Menu"
+										href="https://www.cyanzoy.top/post/WdPSaRYzX/">Menu</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
 
 
-  </head>
-  <body>
-    <div id="app" class="main">
 
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://www.cyanzoy.top">
-        <img src="https://www.cyanzoy.top/images/avatar.png?v=1594116924533" class="site-logo">
-        <h1 class="site-title">sigma</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1594709396997" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+        
+        <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="/">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/about">关于</a></li>
+			
+			<li class="layout-collapse-item"><a title="备忘录" href="https://www.cyanzoy.top/post/fnyLymsmv/">备忘录</a></li>
+			
+			<li class="layout-collapse-item"><a title="Menu" href="https://www.cyanzoy.top/post/WdPSaRYzX/">Menu</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+        <div class="layout-banner">
+  <div class="layout-banner-main">
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-12 col-lg-9">
+          <div class="banner">
+            <div class="banner-list row">
+              <div class="item col-12 col-sm-9">
+                
+                
+                <div class="banner-card main">
+                  <a class="card-content" href="https://www.cyanzoy.top/post/fnyLymsmv/" style="background-image: url('https://www.cyanzoy.top/post-images/fnyLymsmv.png')">
+                    <div class="mask"></div>
+                    <div class="title">
+                      <h3 class="card-title">备忘录</h3>
+                    </div>
+                  </a>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+              </div>
+              <div class="col-12 col-sm-3">
+                <div class="row">
+                  
+                  
+                  
+                  
+                  <div class="item col-4 col-sm-12">
+                    <div class="banner-card">
+                      <a class="card-content" href="https://www.cyanzoy.top/post/XTKTmzCa2/"
+                        style="background-image: url('https://www.cyanzoy.top/post-images/XTKTmzCa2.png')">
+                        <div class="mask"></div>
+                        <div class="title">
+                          <h3 class="card-title">story</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="item col-4 col-sm-12">
+                    <div class="banner-card">
+                      <a class="card-content" href="https://www.cyanzoy.top/post/2fYlO0X9T/"
+                        style="background-image: url('https://www.cyanzoy.top/post-images/2fYlO0X9T.png')">
+                        <div class="mask"></div>
+                        <div class="title">
+                          <h3 class="card-title">✍Celebrated dictum </h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="item col-4 col-sm-12">
+                    <div class="banner-card">
+                      <a class="card-content" href="https://www.cyanzoy.top/post/LfyAN6ymf/"
+                        style="background-image: url('https://www.cyanzoy.top/post-images/LfyAN6ymf.jpg')">
+                        <div class="mask"></div>
+                        <div class="title">
+                          <h3 class="card-title">数据库 Mysql</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div>
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-        
-          <a href="https://www.cyanzoy.top/post/fnyLymsmv/" class="site-nav" target="_blank">
-            备忘录
-          </a>
-        
-      
-        
-          <a href="https://www.cyanzoy.top/post/WdPSaRYzX/" class="site-nav" target="_blank">
-            Menu
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-          <a class="social-link" href="https://github.com/MAOA-L" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-      
-        
-      
-        
-      
-        
-          <a class="social-link" href="https://www.zhihu.com/people/chen-zhou-yun-15/activities" target="_blank">
-            <i class="fab fa-zhihu"></i>
-          </a>
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      为技术而生
-    </div>
-    <div class="site-footer">
-      © 2019 CyanZoy | <a class="rss" href="https://www.cyanzoy.top/atom.xml" target="_blank">RSS</a>
-    </div>
   </div>
 </div>
 
+        <div class="layout-content">
+  <div class="layout-content-main">
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-12 col-lg-9">
+          <div class="card-list">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-12">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="https://www.cyanzoy.top/post/OjllcIH4O/">
+                        <h3>Room</h3>
+                      </a>
+                    </div>
+                    <div class="inner">
+                      <div class="abstract">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                    </div>
+                    <div class="item">2020-07-07</div>
+                  </div>
+                </div>
+                
+              </div>
+            </article>
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-12">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="https://www.cyanzoy.top/post/acghhaSlR/">
+                        <h3>九价-信息</h3>
+                      </a>
+                    </div>
+                    <div class="inner">
+                      <div class="abstract">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                    </div>
+                    <div class="item">2020-07-02</div>
+                  </div>
+                </div>
+                
+              </div>
+            </article>
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-12">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="https://www.cyanzoy.top/post/_XJ7mjKNk/">
+                        <h3>九价预约流程-时间表</h3>
+                      </a>
+                    </div>
+                    <div class="inner">
+                      <div class="abstract">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                    </div>
+                    <div class="item">2020-07-02</div>
+                  </div>
+                </div>
+                
+              </div>
+            </article>
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-12">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="https://www.cyanzoy.top/post/ofCq4tNCT/">
+                        <h3>说明书备份</h3>
+                      </a>
+                    </div>
+                    <div class="inner">
+                      <div class="abstract">
+                        <p>ikbc87，</p>
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/OjllcIH4O/">
-                  <h2 class="post-title">Room</h2>
-                </a>
-                <div class="post-date">
-                  2020-07-07
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                    </div>
+                    <div class="item">2020-06-12</div>
+                  </div>
                 </div>
-                <div class="post-abstract">
-                  
-                </div>
+                
               </div>
-              
             </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/acghhaSlR/">
-                  <h2 class="post-title">九价-信息</h2>
-                </a>
-                <div class="post-date">
-                  2020-07-02
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-12">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="https://www.cyanzoy.top/post/ZDAnyZDWk/">
+                        <h3>win10技巧</h3>
+                      </a>
+                    </div>
+                    <div class="inner">
+                      <div class="abstract">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                    </div>
+                    <div class="item">2020-06-01</div>
+                  </div>
                 </div>
-                <div class="post-abstract">
-                  
-                </div>
+                
               </div>
-              
             </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/_XJ7mjKNk/">
-                  <h2 class="post-title">九价预约流程-时间表</h2>
-                </a>
-                <div class="post-date">
-                  2020-07-02
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/ofCq4tNCT/">
-                  <h2 class="post-title">说明书备份</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-12
-                </div>
-                <div class="post-abstract">
-                  <p>ikbc87，</p>
+            
+            
+            <article class="card">
+              <div class="card-item row">
+                
+                <div class="card-content col-12">
+                  <div class="card-body">
+                    <div class="header">
+                      <a class="title" href="https://www.cyanzoy.top/post/I9Yc7IbC1/">
+                        <h3>🌷linux-问题记录</h3>
+                      </a>
+                    </div>
+                    <div class="inner">
+                      <div class="abstract">
+                        <p>pip安装时报【fatal error: Python.h: No such file or directory compilation terminated】错误</p>
 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="item">
+                      
+                    </div>
+                    <div class="item">2020-05-18</div>
+                  </div>
                 </div>
+                
               </div>
-              
             </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/ZDAnyZDWk/">
-                  <h2 class="post-title">win10技巧</h2>
-                </a>
-                <div class="post-date">
-                  2020-06-01
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/I9Yc7IbC1/">
-                  <h2 class="post-title">🌷linux-问题记录</h2>
-                </a>
-                <div class="post-date">
-                  2020-05-18
-                </div>
-                <div class="post-abstract">
-                  <p>pip安装时报【fatal error: Python.h: No such file or directory compilation terminated】错误</p>
+            
+            
+          </div>
 
-                </div>
-              </div>
-              
-            </article>
           
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/Z9HjxE7Ma/">
-                  <h2 class="post-title">挑水果</h2>
-                </a>
-                <div class="post-date">
-                  2020-05-14
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
+          <div class="layout-paginator">
+            <div class="paginator">
+              <button href="https://www.cyanzoy.top/page/2" class="btn btn-paginator width-100">加载更多</button>
+            </div>
+          </div>
           
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/BXAV9aBpF/">
-                  <h2 class="post-title">笔记本双网卡实现内外网同时访问</h2>
-                </a>
-                <div class="post-date">
-                  2020-04-20
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/6P5XXW1yl/">
-                  <h2 class="post-title">Supervisor</h2>
-                </a>
-                <div class="post-date">
-                  2020-03-09
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://www.cyanzoy.top/post/o12oBvxY2/">
-                  <h2 class="post-title">QQ安全中心 - 动态口令的生成算法</h2>
-                </a>
-                <div class="post-date">
-                  2020-02-18
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-
-          <div class="pagination-container">
-  
-  
-    <a href="https://www.cyanzoy.top/page/2" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
-  
-</div>
 
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-<script type="application/javascript">
-
-AOS.init();
-
-hljs.initHighlightingOnLoad()
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
-
+<script type="text/javascript">
+  //点击加载更多
+  jQuery(document).ready(function ($) {
+    //点击下一页的链接(即那个a标签)
+    $(' .btn-paginator').click(function () {
+      $this = $(this);
+      $this.addClass('loading').text('正在加载'); //给a标签加载一个loading的class属性，用来添加加载效果
+      var href = $this.attr('href'); //获取下一页的链接地址
+      if (href != undefined) { //如果地址存在
+        $.ajax({ //发起ajax请求
+          url: href,
+          //请求的地址就是下一页的链接
+          type: 'get',
+          //请求类型是get
+          error: function (request) {
+            //如果发生错误怎么处理
+          },
+          success: function (data) { //请求成功
+            $this.removeClass('loading').text('加载更多'); //移除loading属性
+            var $res = $(data).find('.card'); //从数据中挑出文章数据，请根据实际情况更改
+            $('.card-list').append($res.fadeIn(
+              500)); //将数据加载加进posts-loop的标签中。
+            var newhref = $(data).find('.btn-paginator').attr('href'); //找出新的下一页链接
+            if (newhref != undefined) {
+              $('.btn-paginator').attr('href', newhref);
+            } else {
+              $('.btn-paginator').remove(); //如果没有下一页了，隐藏
+            }
+          }
+        });
+      }
+      return false;
+    });
+  });
 </script>
 
+        	<div class="layout-footer">
 
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									© 2019 CyanZoy
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+	</div>
 
-  </body>
+	<script type="text/javascript" src='https://www.cyanzoy.top/media/scripts/main.js'></script>
+	
+    </div>
+</body>
+
 </html>
