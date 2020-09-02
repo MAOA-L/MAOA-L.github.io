@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>sigma</title>
-    <updated>2020-08-31T08:10:24.765Z</updated>
+    <updated>2020-09-02T01:58:30.076Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://www.cyanzoy.top/images/avatar.png</logo>
     <icon>https://www.cyanzoy.top/favicon.ico</icon>
     <rights>All rights reserved 2020, sigma</rights>
+    <entry>
+        <title type="html"><![CDATA[Python中废弃方法的写法]]></title>
+        <id>https://www.cyanzoy.top/post/MQ4DAgJ2Z/</id>
+        <link href="https://www.cyanzoy.top/post/MQ4DAgJ2Z/">
+        </link>
+        <updated>2020-09-02T01:57:55.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>warnings.warn(
+        &quot;'register_events' is deprecated since version 0.4.0. Please remove all references from your code.&quot;,
+        DeprecationWarning,
+    )
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[pip 命令]]></title>
         <id>https://www.cyanzoy.top/post/2Ly6WqToN/</id>
@@ -209,23 +222,6 @@ route -p add 192.0.0.0 mask 255.255.255.0 192.168.0.1 路由地址 掩码 网关
 <p><img src="https://www.cyanzoy.top/post-images/1587370501982.png" alt="" loading="lazy"><br>
 此时 10的网会从10.0.0.0配置的走，其他的请求默认从0.0.0.0配置走</p>
 <h1 id="路由规则是先匹配明细路由也就是说访问的时候电脑会先检测访问的是不是10000的内网地址如果是就走内网如果不是就全部走默认路由到公网">路由规则是先匹配明细路由，也就是说访问的时候电脑会先检测访问的是不是10.0.0.0的内网地址，如果是，就走内网，如果不是，就全部走默认路由到公网；</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Supervisor]]></title>
-        <id>https://www.cyanzoy.top/post/6P5XXW1yl/</id>
-        <link href="https://www.cyanzoy.top/post/6P5XXW1yl/">
-        </link>
-        <updated>2020-03-09T03:43:46.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-安装-建立软连接">1. 安装 建立软连接</h1>
-<pre><code>yum install supervisor
-</code></pre>
-<h1 id="2-supervisor-本身">2.  supervisor 本身</h1>
-<p>项目 <code>/etc/supervisord.conf</code>  配置了 <code>supervisor</code>的基本配置文件，<br>
-取消[inet_http_server] 配置单元的注释<br>
-使用 <code>supervisord -c /etc/supervisord.conf</code><br>
-或者<code>supervisorctl -c /etc/supervisord.conf</code> 启动supervisor，修改完配置文件之后，使用<code>supervisorctl reload</code>重启supervisor</p>
-<h1 id="3-super下的应用">3. super下的应用</h1>
 ]]></content>
     </entry>
 </feed>
