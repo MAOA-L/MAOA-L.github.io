@@ -2253,7 +2253,7 @@ blockquote p {
 }
 pre {
   margin: 1.6em 0;
-  padding: 24px 18px;
+  padding: 6px 18px;
   border-radius: 4px;
   background: #e6f7ff;
   white-space: pre-wrap;
@@ -2272,10 +2272,11 @@ pre code {
   margin: 0;
   padding: 0;
   border: none;
-  font-size: 13px;
+  font-size: 16px;
 }
 .theme-dark pre {
   background: #292a2d;
+  color: #8ade9cd1;
 }
 .theme-dark code {
   border: 1px solid #3d3c41;
