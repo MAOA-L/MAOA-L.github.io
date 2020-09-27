@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.cyanzoy.top</id>
     <title>sigma</title>
-    <updated>2020-09-23T09:31:45.337Z</updated>
+    <updated>2020-09-27T01:07:31.248Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.cyanzoy.top"/>
     <link rel="self" href="https://www.cyanzoy.top/atom.xml"/>
@@ -50,7 +50,7 @@ pip download 你的包名 -d &quot;下载的路径(windows下双引号来表示�
         <content type="html"><![CDATA[<p>预防老年痴呆,人人有责</p>
 <!-- more -->
 <h1 id="宁波住建局项目查询网址">宁波住建局项目查询网址</h1>
-<p><a href="https://esf.cnnbfdc.com/">https://esf.cnnbfdc.com/</a></p>
+<p><a href="https://newhouse.cnnbfdc.com/">https://newhouse.cnnbfdc.com/</a></p>
 <h1 id="关于服务器项目的一些备忘">关于服务器项目的一些备忘</h1>
 <p>项目虚拟环境统一放在 /home/env/ 下<br>
 自定义service放在 /usr/lib/systemd/system/ 目录下<br>
