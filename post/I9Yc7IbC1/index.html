@@ -33,7 +33,7 @@
 						<div class="logo">
 							<a href="https://www.cyanzoy.top">
 								<img class="logo"
-									src="https://www.cyanzoy.top/media/images/site_avatar.png?v=1602224891683"
+									src="https://www.cyanzoy.top/media/images/site_avatar.png?v=1602482602825"
 									alt="">
 							</a>
 						</div>
@@ -80,7 +80,7 @@
 							<div class="search-lightbox">
 								<div class="search-body">
 
-									<form id="gridea-search-form" data-update="1602224891683" action="/search/" class="search-form">
+									<form id="gridea-search-form" data-update="1602482602825" action="/search/" class="search-form">
 										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
 										<button type="submit" class="submit" aria-label="Submit">
 											<i class="fa fa-search" aria-hidden="true"></i>
@@ -161,6 +161,17 @@
 <pre><code>sudo yum install python-devel   # for python2.x installs
 sudo yum install python34-devel   # for python3.4 installs
 </code></pre>
+<h1 id="ssh-登录修改登录端口">ssh 登录修改登录端口</h1>
+<ol>
+<li>修改端口</li>
+</ol>
+<pre><code>vim /etc/ssh/sshd_config 
+</code></pre>
+<ol start="2">
+<li>重启服务</li>
+</ol>
+<pre><code>systemctl restart sshd
+</code></pre>
 
                           </div>
                         </div>
@@ -235,7 +246,10 @@ sudo yum install python34-devel   # for python3.4 installs
                     <div class="col-12 col-lg-2 d-none d-lg-block">
                       <div class="layout-post-sidebar">
                         <div class="layout-sidebar-item">
-                          
+                          <ul class="markdownIt-TOC">
+<li><a href="#ssh-%E7%99%BB%E5%BD%95%E4%BF%AE%E6%94%B9%E7%99%BB%E5%BD%95%E7%AB%AF%E5%8F%A3">ssh 登录修改登录端口</a></li>
+</ul>
+
                         </div>
                       </div>
                     </div>
